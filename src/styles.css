@@ -54,11 +54,14 @@ a {
 #containerProjects {
   display: flex;
   flex-wrap: wrap;
+  justify-content: space-around;
 }
 #containerProjects {
   padding: 0 5%;
 }
-
+.fc-primary {
+  color: white;
+}
 .nav-link {
   margin-right: 0;
   text-decoration: none;
@@ -110,6 +113,9 @@ a {
   border-radius: 0 0 0.5em 0.5em;
 }
 .textcentrado {
+  text-align: center;
+}
+.txta-center {
   text-align: center;
 }
 .heightIconos {
@@ -223,7 +229,6 @@ a {
   .divProject {
     height: 60vh;
     width: 20vw;
-    margin-right: 2em;
   }
 }
 @media (min-width: 426px) and (max-width: 768px) {
