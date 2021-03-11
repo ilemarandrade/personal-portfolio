@@ -8,11 +8,7 @@ const Home = () => {
     <>
       <Carousel />
       <About />
-      <Projects
-      /*  getOffsetTop={this.getOffsetTop}
-            
-            topProjects={this.topProjects} */
-      />
+      <Projects />
     </>
   );
 };

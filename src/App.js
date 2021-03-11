@@ -3,12 +3,13 @@ import "./styles.css";
 import Footer from "./layout/Footer.js";
 import Navbar from "./layout/Navbar.js";
 import assignamentFont from "./helpers/assignmentFont";
-import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
-import Routes from "./routes/Routes";
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import RouteToProjectsDynamically from "./routes/RouteToProjectsDynamically";
 import Home from "./views/Home";
 
 const App = () => {
   const [deviceWidth, setdeviceWidth] = useState(window.innerWidth);
+
   useEffect(() => {
     setdeviceWidth(assignamentFont(deviceWidth));
     window.addEventListener("resize", orientation);
@@ -28,7 +29,7 @@ const App = () => {
         <Navbar />
         <Switch>
           <Route path="/project/nameOfprojectIs:project">
-            <Routes />
+            <RouteToProjectsDynamically />
           </Route>
           <Route path="*">
             <Home />

@@ -3,7 +3,7 @@ import { useParams } from "react-router-dom";
 import { projectsByIlemar } from "../constant/constant";
 import ScreenLoader from "../layout/ScreenLoader";
 
-const Routes = () => {
+const RouteToProjectsDynamically = () => {
   let { project } = useParams();
   let [showIframe, setShowIframe] = useState(false);
   let linkProjectSandbox = projectsByIlemar.filter(
@@ -43,4 +43,4 @@ const Routes = () => {
   );
 };
 
-export default Routes;
+export default RouteToProjectsDynamically;
