@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/IlemarOficialV2.0/precache-manifest.a2bd84842512abef2818d2819b3b90b1.js"
+  "/IlemarOficialV2.0/precache-manifest.b0290dac153e4b1c7f2c78685838a455.js"
 );
 
 self.addEventListener('message', (event) => {

@@ -1,10 +1,10 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "fb2e849268ebecd83dbbc8dabce2fe55",
+    "revision": "28f84ce92340d3416d7ed74d189bb261",
     "url": "/IlemarOficialV2.0/index.html"
   },
   {
-    "revision": "a1125eb4f6fe5cc8d139",
+    "revision": "bfce282a41c5156b668c",
     "url": "/IlemarOficialV2.0/static/css/main.cfefde64.chunk.css"
   },
   {
@@ -12,8 +12,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/IlemarOficialV2.0/static/js/2.70fe04bb.chunk.js"
   },
   {
-    "revision": "a1125eb4f6fe5cc8d139",
-    "url": "/IlemarOficialV2.0/static/js/main.5b783fcd.chunk.js"
+    "revision": "bfce282a41c5156b668c",
+    "url": "/IlemarOficialV2.0/static/js/main.f6b4dd21.chunk.js"
   },
   {
     "revision": "2fa83aef8c17f1f53333",
