@@ -6,9 +6,7 @@ import { projectsByIlemar } from "../constant/constant";
 const Projects = () => {
   const projectOffsetTop = useRef(null);
 
-  useEffect(() => {
-    //props.getOffsetTop(projectOffsetTop.current.offsetTop);
-  }, [projectOffsetTop]);
+  useEffect(() => {}, [projectOffsetTop]);
 
   return (
     <div
