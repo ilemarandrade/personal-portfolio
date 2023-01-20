@@ -1,6 +1,0 @@
-const storeInitial=
-{
-    modalShow:false,
-    
-
-}
