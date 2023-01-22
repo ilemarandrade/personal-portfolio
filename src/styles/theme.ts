@@ -1,4 +1,4 @@
-import { createTheme } from "@mui/system";
+import { createTheme } from "@mui/material";
 
 declare module "@mui/material/styles" {
   // allow configuration using `createTheme`
@@ -23,7 +23,7 @@ const theme = createTheme({
       main: "rgb(255, 105, 0)",
     },
     text: {
-      primary: "white",
+      primary: "#00000",
       secondary: "#838683",
       tertiary: "rgb(255, 105, 0)",
     },
