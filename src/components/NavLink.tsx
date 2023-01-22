@@ -18,7 +18,6 @@ const NavLink = ({ href, children, className }: Props) => {
   const { pathname } = useRouter();
   const RegexRoute = new RegExp(href, "i");
   const isActive = RegexRoute.test(pathname);
-  console.log({ isActive });
   return (
     <NavLinkStyles href={href} isActive={isActive} className={className}>
       {children}
