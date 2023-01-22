@@ -97,7 +97,7 @@ const Menu = styled(Grid)(
   }
 `
 );
-const Nav = () => {
+const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const isMobile = useMediaQuery((theme: Theme) =>
     theme.breakpoints.down("md")
@@ -150,4 +150,4 @@ const Nav = () => {
   );
 };
 
-export default Nav;
+export default Header;
