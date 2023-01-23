@@ -27,6 +27,9 @@ const theme = createTheme({
       secondary: "#838683",
       tertiary: "rgb(255, 105, 0)",
     },
+    common: {
+      black: "#111111",
+    },
   },
 });
 
