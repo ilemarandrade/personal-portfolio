@@ -12,8 +12,9 @@ export const NavStyles = styled(Grid)(
     text-decoration: none;
     position: fixed;
     z-index: 2;
-    background: #111111;
-    ${[theme.breakpoints.down("sm")]}{
+    background: #111111d9;
+    backdrop-filter: blur(7px);
+    ${[theme.breakpoints.down("md")]}{
       padding: 0px 25px;
       height: 80px;
     }
@@ -82,7 +83,7 @@ export const Menu = styled(Grid)(
     padding: 0px 25px;
     top: ${isOpen ? "80px" : "-100vh"};
     transition: top 0.3s cubic-bezier(0.68, -0.55, 0.27, 1.55);
-    ${[theme?.breakpoints.up("sm")]}{
+    ${[theme?.breakpoints.up("md")]}{
       display: none;
     }
   `
