@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/IlemarOficialV2.0/static/css/main.cfefde64.chunk.css",
-    "main.js": "/IlemarOficialV2.0/static/js/main.f6b4dd21.chunk.js",
-    "main.js.map": "/IlemarOficialV2.0/static/js/main.f6b4dd21.chunk.js.map",
+    "main.css": "/IlemarOficialV2.0/static/css/main.68ef7782.chunk.css",
+    "main.js": "/IlemarOficialV2.0/static/js/main.8d6c0fea.chunk.js",
+    "main.js.map": "/IlemarOficialV2.0/static/js/main.8d6c0fea.chunk.js.map",
     "runtime~main.js": "/IlemarOficialV2.0/static/js/runtime~main.b0c744c3.js",
     "runtime~main.js.map": "/IlemarOficialV2.0/static/js/runtime~main.b0c744c3.js.map",
     "static/js/2.70fe04bb.chunk.js": "/IlemarOficialV2.0/static/js/2.70fe04bb.chunk.js",
     "static/js/2.70fe04bb.chunk.js.map": "/IlemarOficialV2.0/static/js/2.70fe04bb.chunk.js.map",
     "index.html": "/IlemarOficialV2.0/index.html",
-    "precache-manifest.b0290dac153e4b1c7f2c78685838a455.js": "/IlemarOficialV2.0/precache-manifest.b0290dac153e4b1c7f2c78685838a455.js",
+    "precache-manifest.ba3d9b1c0470d284e3b301b2a28b19fc.js": "/IlemarOficialV2.0/precache-manifest.ba3d9b1c0470d284e3b301b2a28b19fc.js",
     "service-worker.js": "/IlemarOficialV2.0/service-worker.js",
-    "static/css/main.cfefde64.chunk.css.map": "/IlemarOficialV2.0/static/css/main.cfefde64.chunk.css.map"
+    "static/css/main.68ef7782.chunk.css.map": "/IlemarOficialV2.0/static/css/main.68ef7782.chunk.css.map"
   }
 }
