@@ -1,4 +1,5 @@
 import { styled } from "@mui/material";
+import Link from "next/link";
 import { ReactNode } from "react";
 
 const BoxMainStyles = styled("div")(
@@ -8,8 +9,9 @@ const BoxMainStyles = styled("div")(
   background: rgb(51, 54, 57);
   border-radius: 24px;
   color: white;
-  padding: 25px;
+  padding: 32px;
   position: relative;
+  overflow: hidden;
   ${[theme.breakpoints.down("sm")]}{
     height: 320px;
   }
@@ -23,9 +25,22 @@ const BoxMainStyles = styled("div")(
 
 interface Props {
   children?: ReactNode;
+  className?: string;
+  to?: string;
+  target?: string;
 }
-const BoxMain = ({ children }: Props) => {
-  return <BoxMainStyles>{children}</BoxMainStyles>;
+const BoxMain = ({ children, className, to, target }: Props) => {
+  return (
+    <BoxMainStyles className={className}>
+      {to ? (
+        <Link href={to} target={target}>
+          {children}
+        </Link>
+      ) : (
+        children
+      )}
+    </BoxMainStyles>
+  );
 };
 
 export default BoxMain;
