@@ -1,8 +1,9 @@
 import { styled } from "@mui/material";
+import { motion } from "framer-motion";
 import Link from "next/link";
-import { ReactNode } from "react";
+import { ReactNode, useEffect, useState } from "react";
 
-const BoxMainStyles = styled("div")(
+const BoxMainStyles = styled(motion.div)(
   ({ theme }) => `
   width: 100%;
   height: 300px;
@@ -31,7 +32,12 @@ interface Props {
 }
 const BoxMain = ({ children, className, to, target }: Props) => {
   return (
-    <BoxMainStyles className={className}>
+    <BoxMainStyles
+      className={className}
+      initial={{ transform: "scale(0)" }}
+      animate={{ transform: "scale(1)" }}
+      transition={{ type: "spring", damping: 80, stiffness: 100 }}
+    >
       {to ? (
         <Link href={to} target={target}>
           {children}
