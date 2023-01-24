@@ -14,6 +14,7 @@ export const NavStyles = styled(Grid)(
     z-index: 2;
     background: #111111d9;
     backdrop-filter: blur(7px);
+    top: 0px;
     ${[theme.breakpoints.down("md")]}{
       padding: 0px 25px;
       height: 80px;
@@ -36,7 +37,7 @@ export const MyName = styled(NavLink)(
 );
 export const MenuItemsStyles = styled(NavLink)(
   ({ theme }) => `
-    color: #838683;
+    color: ${theme.palette.text.secondary};
     margin-right: 1rem;
     font-weight: 600;
     &:hover {
@@ -78,11 +79,12 @@ export const Menu = styled(Grid)(
     background: #111111;
     width: 100vw;
     height: 100vh;
-    position: absolute;
+    position: fixed;
     text-decoration: none;
-    padding: 0px 25px;
+    padding: 8px 25px;
     top: ${isOpen ? "80px" : "-100vh"};
     transition: top 0.3s cubic-bezier(0.68, -0.55, 0.27, 1.55);
+    z-index: 2;
     ${[theme?.breakpoints.up("md")]}{
       display: none;
     }
