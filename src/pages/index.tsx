@@ -5,8 +5,9 @@ import { motion } from "framer-motion";
 import BadgeIcon from "@mui/icons-material/Badge";
 import animation from "@/constants/animation";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
-import WebIcon from '@mui/icons-material/Web';
+import WebIcon from "@mui/icons-material/Web";
 import Arrow from "@/assets/icons/Arrow";
+import BugReportIcon from "@mui/icons-material/BugReport";
 
 export default function Home() {
   const isMobile = useMediaQuery((theme: Theme) =>
@@ -34,7 +35,7 @@ export default function Home() {
               <Typography variant="h3" fontWeight={600}>
                 Hi, I&apos;m Ilemar👋
               </Typography>
-              <Typography variant="h5" sx={{position: 'relative'}}>
+              <Typography variant="h5" sx={{ position: "relative" }}>
                 &quot;Nothing is impossible&quot;
                 <Arrow />
               </Typography>
@@ -75,7 +76,11 @@ export default function Home() {
               variants={animation.enterTextFromBottom.variants.firstBox.variant}
             >
               <BadgeIcon fontSize="large" />
-              <Typography variant="h4" fontWeight={600} sx={{position: 'relative'}}>
+              <Typography
+                variant="h4"
+                fontWeight={600}
+                sx={{ position: "relative" }}
+              >
                 My work
                 <Arrow />
               </Typography>
@@ -131,27 +136,52 @@ export default function Home() {
                 fontWeight={600}
                 component={motion.h5}
                 variants={{ hover: { opacity: 1 } }}
-                initial={{ opacity: isMobile ? 1 : 0}}
-                align="center"
+                initial={{ opacity: isMobile ? 1 : 0 }}
               >
                 Let&apos;s connect
               </Typography>
             </Grid>
+            <Arrow style={{ right: "40px" }} />
           </Grid>
         </Grid>
         <Grid item xs={12} sm={12} md={6}>
           <BoxMain to="/contact">
-            <Grid container spacing={2}> 
+            <Grid container spacing={2}>
               <Grid item sm={12}>
                 <Typography>What I Do</Typography>
               </Grid>
               <Grid item container>
-                <Grid item sm={4} container justifyContent="center">
-                  <Typography variant="h5" align="center">Web Development</Typography>
+                <Grid
+                  item
+                  xs={12}
+                  sm={4}
+                  container
+                  justifyContent="center"
+                  alignItems="center"
+                  direction="column"
+                  sx={{ mb: { xs: 2, sm: 0 } }}
+                >
+                  <Typography variant="h6" fontWeight={600} align="center">
+                    Web Development
+                  </Typography>
                   <WebIcon fontSize="large" />
                 </Grid>
+                <Grid
+                  item
+                  xs={12}
+                  sm={4}
+                  container
+                  justifyContent="center"
+                  alignItems="center"
+                  direction="column"
+                >
+                  <Typography variant="h6" fontWeight={600} align="center">
+                    Test Unit-End2End
+                  </Typography>
+                  <BugReportIcon fontSize="large" />
+                </Grid>
+                <Arrow style={{ right: "40px", bottom: "40px" }} />
               </Grid>
-
             </Grid>
           </BoxMain>
         </Grid>

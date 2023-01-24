@@ -12,6 +12,7 @@ import {
   NavStyles,
 } from "./styles";
 import Link from "next/link";
+import { motion } from "framer-motion";
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -20,7 +21,13 @@ const Header = () => {
   );
   return (
     <>
-      <NavStyles container wrap="nowrap">
+      <NavStyles
+        container
+        wrap="nowrap"
+        component={motion.div}
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1, transition: { delay: 1.2 } }}
+      >
         <Grid item alignItems="center" sx={{ display: "flex" }}>
           <MyName href="/">Ilemar Andrade</MyName>
           {!isMobile && <Avatar alt="Ilemar Andrade" src={ile} />}
@@ -40,9 +47,7 @@ const Header = () => {
                 </MenuItemsStyles>
               ))}
               <ButtonGetinTouch variant="outlined">
-                <Link href="/contact">
-                  Get in Touch
-                </Link>
+                <Link href="/contact">Get in Touch</Link>
               </ButtonGetinTouch>
             </>
           ) : (

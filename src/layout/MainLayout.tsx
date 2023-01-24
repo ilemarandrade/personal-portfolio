@@ -1,5 +1,7 @@
+import Footer from "@/components/Footer";
 import Header from "@/components/Header";
 import { styled, Typography } from "@mui/material";
+import { motion } from "framer-motion";
 import Head from "next/head";
 import { ReactNode } from "react";
 
@@ -11,11 +13,13 @@ const MainStyles = styled("main")(
     }
 `
 );
-const BigTitle = styled('h1')(({theme})=>`
+const BigTitle = styled(motion.h1)(({theme})=>`
     text-align: center;
     font-size: 10vw;
     line-height: 10vw;
     color: ${theme.palette.text.secondary};
+    font-weight: 600;
+    position: relative;
 `)
 interface Props {
   title: string;
@@ -39,8 +43,9 @@ export default function MainLayout({
       </Head>
       <MainStyles>
         <Header />
-        {bigTitle && <BigTitle>{bigTitle}</BigTitle>}
+        {bigTitle && <BigTitle initial={{opacity: 0}} animate={{opacity: 1, transition: {delay:1.5}}}>{bigTitle}</BigTitle>}
         {children}
+        <Footer />
       </MainStyles>
     </>
   );
