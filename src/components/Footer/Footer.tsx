@@ -5,16 +5,21 @@ import InstagramIcon from '@mui/icons-material/Instagram';
 
 const IconLink = styled(Link)`
     color: white;
+    margin: 0rem 1rem;
 `;
+const FooterStyles = styled(Grid)`
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+`
 const Footer = () => (
-  <Grid container justifyContent="center" alignItems="center">
+  <FooterStyles container justifyContent="center" alignItems="center">
     <IconLink href="https://www.linkedin.com/in/ilemar-andrade-0b261818b/" target="_blank">
-      <LinkedInIcon />
+      <LinkedInIcon fontSize="medium" />
     </IconLink>
-    <IconLink href="https://www.instagram.com/stories/highlights/17988958438734237/" target="_blank">
-    <InstagramIcon />
+    <IconLink href="https://www.instagram.com/ilemar_andrade07/" target="_blank">
+    <InstagramIcon fontSize="medium" />
     </IconLink>
-  </Grid>
+  </FooterStyles>
 );
 
 export default Footer;
