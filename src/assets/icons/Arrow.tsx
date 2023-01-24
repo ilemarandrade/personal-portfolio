@@ -1,4 +1,5 @@
 import { styled } from "@mui/material";
+import { BaseCSSProperties } from "@mui/material/styles/createMixins";
 
 const ArrowStyled = styled('svg')`
   position: absolute;
@@ -6,8 +7,9 @@ const ArrowStyled = styled('svg')`
 `
 interface Props {
   className?: string;
+  style?: BaseCSSProperties;
 }
-const Arrow = ({ className }: Props) => (
+const Arrow = ({ className, style }: Props) => (
   <ArrowStyled
     xmlns="http://www.w3.org/2000/svg"
     viewBox="0 0 256 256"
@@ -20,6 +22,7 @@ const Arrow = ({ className }: Props) => (
       fill: "rgb(224, 223, 220)",
       flexShrink: 0,
       cursor: "auto",
+      ...style,
     }}
     className={className}
   >
