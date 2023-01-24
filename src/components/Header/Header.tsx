@@ -11,6 +11,7 @@ import {
   MyName,
   NavStyles,
 } from "./styles";
+import Link from "next/link";
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -39,7 +40,9 @@ const Header = () => {
                 </MenuItemsStyles>
               ))}
               <ButtonGetinTouch variant="outlined">
-                Get in Touch
+                <Link href="/contact">
+                  Get in Touch
+                </Link>
               </ButtonGetinTouch>
             </>
           ) : (
