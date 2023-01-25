@@ -2,6 +2,7 @@ import MainLayout from "@/layout/MainLayout";
 import { Grid, Typography, styled } from "@mui/material";
 import myProjects from "@/constants/myProjects";
 import { motion } from "framer-motion";
+import { useRouter } from "next/router";
 
 const IframeStyles = styled("iframe")`
   width: 100%;
@@ -12,6 +13,10 @@ interface Props {
   project: any;
 }
 export default function Home({ project }: Props) {
+  const router = useRouter();
+  if (router.isFallback) {
+    return <div>Loading...</div>
+  }
   const { environment, name, codesandboxLink } = project;
   return (
     <MainLayout title="Works">
