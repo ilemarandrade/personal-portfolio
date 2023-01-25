@@ -1,8 +1,16 @@
 import { Button, Grid, GridProps, styled, Theme } from "@mui/material";
+import {
+  AnimationProps,
+  ForwardRefComponent,
+  HTMLMotionProps,
+} from "framer-motion";
 import Image from "next/image";
 import NavLink from "../NavLink";
 
-export const NavStyles = styled(Grid)(
+interface NavStylesProps extends GridProps, AnimationProps {
+  component: ForwardRefComponent<HTMLDivElement, HTMLMotionProps<"div">>;
+}
+export const NavStyles = styled(Grid)<NavStylesProps>(
   ({ theme }) => `
     height: 109px;
     padding: 0px 50px;
@@ -15,6 +23,7 @@ export const NavStyles = styled(Grid)(
     background: #111111d9;
     backdrop-filter: blur(7px);
     top: 0px;
+    z-index: 3;
     ${[theme.breakpoints.down("md")]}{
       padding: 0px 25px;
       height: 80px;

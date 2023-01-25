@@ -30,7 +30,7 @@ export default function Home() {
               justifyContent="center"
               direction="column"
               sx={{ height: "100%", position: "relative" }}
-              variants={animation.enterTextFromBottom.variants.firstBox.variant}
+              variants={animation.enterTextFromBottom.variants.firstBox.variants}
             >
               <Typography variant="h3" fontWeight={600}>
                 Hi, I&apos;m Ilemar👋
@@ -45,7 +45,7 @@ export default function Home() {
               sx={{ height: "100%", position: "absolute", py: "32px" }}
               initial={animation.enterTextFromBottom.variants.secondBox.initial}
               variants={
-                animation.enterTextFromBottom.variants.secondBox.variant
+                animation.enterTextFromBottom.variants.secondBox.variants
               }
             >
               <Typography variant="h3" fontWeight={600}>
@@ -73,7 +73,7 @@ export default function Home() {
               justifyContent="center"
               direction="column"
               sx={{ height: "100%", position: "relative" }}
-              variants={animation.enterTextFromBottom.variants.firstBox.variant}
+              variants={animation.enterTextFromBottom.variants.firstBox.variants}
             >
               <BadgeIcon fontSize="large" />
               <Typography
@@ -92,7 +92,7 @@ export default function Home() {
               sx={{ height: "100%", position: "absolute", py: "32px" }}
               initial={animation.enterTextFromBottom.variants.secondBox.initial}
               variants={
-                animation.enterTextFromBottom.variants.secondBox.variant
+                animation.enterTextFromBottom.variants.secondBox.variants
               }
             >
               <Typography variant="h4" fontWeight={600}>
