@@ -1,10 +1,10 @@
 import { styled } from "@mui/material";
 import { BaseCSSProperties } from "@mui/material/styles/createMixins";
 
-const ArrowStyled = styled('svg')`
+const ArrowStyled = styled("svg")`
   position: absolute;
   right: 0px;
-`
+`;
 interface Props {
   className?: string;
   style?: BaseCSSProperties;
@@ -42,7 +42,7 @@ const Arrow = ({ className, style }: Props) => (
         fill="none"
         stroke="rgb(224, 223, 220)"
         stroke-linecap="round"
-        stroke-linejoin="round"
+        strokeLinejoin="round"
         stroke-width="16"
       ></polyline>
       <line
@@ -53,7 +53,7 @@ const Arrow = ({ className, style }: Props) => (
         fill="none"
         stroke="rgb(224, 223, 220)"
         stroke-linecap="round"
-        stroke-linejoin="round"
+        strokeLinejoin="round"
         stroke-width="16"
       ></line>
     </g>
