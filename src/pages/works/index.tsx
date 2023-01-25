@@ -15,7 +15,8 @@ export default function Home() {
            <Grid
            item
            xs={12}
-           sm={4}
+           sm={6}
+           lg={4}
            component={motion.div}
            whileHover={animation.worksWithMobileExample.name}
            key={name}
