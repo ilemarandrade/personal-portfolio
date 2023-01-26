@@ -7,9 +7,9 @@ const menuItems = [
     to: "/works",
     label: "Works",
   },
-  {
-    to: "/resume",
-    label: "Resume",
-  },
+  // {
+  //   to: "/resume",
+  //   label: "Resume",
+  // },
 ];
 export default menuItems;
