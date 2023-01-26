@@ -21,7 +21,7 @@ export default function Home() {
           xs={12}
           sm={6}
           component={motion.div}
-          whileHover={animation.enterTextFromBottom.name}
+          whileHover={isMobile ? "" : animation.enterTextFromBottom.name}
         >
           <BoxMain to="/about">
             <Grid
@@ -30,7 +30,9 @@ export default function Home() {
               justifyContent="center"
               direction="column"
               sx={{ height: "100%", position: "relative" }}
-              variants={animation.enterTextFromBottom.variants.firstBox.variants}
+              variants={
+                animation.enterTextFromBottom.variants.firstBox.variants
+              }
             >
               <Typography variant="h3" fontWeight={600}>
                 Hi, I&apos;m Ilemar👋
@@ -64,7 +66,7 @@ export default function Home() {
           sm={6}
           md={3}
           component={motion.div}
-          whileHover={animation.enterTextFromBottom.name}
+          whileHover={isMobile ? "" : animation.enterTextFromBottom.name}
         >
           <BoxMain to="/works">
             <Grid
@@ -73,7 +75,9 @@ export default function Home() {
               justifyContent="center"
               direction="column"
               sx={{ height: "100%", position: "relative" }}
-              variants={animation.enterTextFromBottom.variants.firstBox.variants}
+              variants={
+                animation.enterTextFromBottom.variants.firstBox.variants
+              }
             >
               <BadgeIcon fontSize="large" />
               <Typography
@@ -109,7 +113,7 @@ export default function Home() {
           xs={12}
           sm={6}
           md={3}
-          whileHover="hover"
+          whileHover={isMobile ? "" : "hover"}
         >
           <Grid
             component={BoxMain}
