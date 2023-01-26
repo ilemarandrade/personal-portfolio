@@ -3,7 +3,6 @@ import FormContact from "@/components/Forms/Contact";
 import MainLayout from "@/layout/MainLayout";
 import { Grid, Typography, styled } from "@mui/material";
 import { motion } from "framer-motion";
-import { useRouter } from "next/router";
 
 const ContainerForm = styled(Grid)`
   background: rgb(51, 54, 57);
@@ -22,11 +21,7 @@ const ContainerForm = styled(Grid)`
     color: #c92424;
   }
 `;
-export default function Home() {
-  const router = useRouter();
-  if (router.isFallback) {
-    return <div>Loading...</div>;
-  }
+export default function Contact() {
   return (
     <MainLayout title="Works">
       <Grid

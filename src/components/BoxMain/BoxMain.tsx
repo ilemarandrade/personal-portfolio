@@ -1,7 +1,7 @@
 import { styled } from "@mui/material";
 import { motion } from "framer-motion";
 import Link from "next/link";
-import { ReactNode, useEffect, useState } from "react";
+import { ReactNode } from "react";
 
 const BoxMainStyles = styled(motion.div)(
   ({ theme }) => `
