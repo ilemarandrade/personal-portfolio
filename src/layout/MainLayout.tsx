@@ -13,14 +13,16 @@ const MainStyles = styled("main")(
     }
 `
 );
-const BigTitle = styled(motion.h1)(({theme})=>`
+const BigTitle = styled(motion.h1)(
+  ({ theme }) => `
     text-align: center;
     font-size: 10vw;
     line-height: 10vw;
     color: ${theme.palette.text.secondary};
     font-weight: 600;
     position: relative;
-`)
+`
+);
 interface Props {
   title: string;
   description?: string;
@@ -37,13 +39,27 @@ export default function MainLayout({
     <>
       <Head>
         <title>{title}</title>
-        <meta name="description" content={description} />
+        <meta
+          name="description"
+          content={
+            description ||
+            `I am a dreamer who does not believe in the impossible, persistent
+              and committed to my goals and projects. `
+          }
+        />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <MainStyles>
         <Header />
-        {bigTitle && <BigTitle initial={{opacity: 0}} animate={{opacity: 1, transition: {delay:1.5}}}>{bigTitle}</BigTitle>}
+        {bigTitle && (
+          <BigTitle
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1, transition: { delay: 1.5 } }}
+          >
+            {bigTitle}
+          </BigTitle>
+        )}
         {children}
         <Footer />
       </MainStyles>
