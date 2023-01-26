@@ -1,0 +1,251 @@
+/*********************************/
+/******Mobile*********************/
+/*********************************/
+
+body {
+  font-family: sans-serif;
+  margin: 0px;
+}
+a {
+  text-decoration: none;
+}
+#item1 {
+  background-image: linear-gradient(0deg, rgba(71, 42, 31, 0.82), #352620c9),
+    url("https://i.ibb.co/vX6p414/img-Developer-Movil.jpg");
+}
+#item2 {
+  background-image: linear-gradient(0deg, rgba(71, 42, 31, 0.82), #352620c9),
+    url("https://i.ibb.co/qM3qkt9/img-Music-Movile.jpg");
+}
+
+#presentation {
+  margin-top: 10vh;
+  height: 90vh;
+  display: flex;
+  background: #201300;
+  color: white;
+}
+#projects {
+  background: #0066ff;
+  display: flex;
+  padding: 10vh 0;
+  color: white;
+}
+#footer {
+  height: 100vh;
+  background: #3b5998;
+  color: white;
+}
+#footerSon2 {
+  width: 100vw;
+  border-top: 2px white solid;
+}
+#navbar {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background: #3b5998;
+  height: 10vh;
+  width: 100vw;
+  position: fixed;
+  z-index: 100;
+  top: 0px;
+  border-bottom: 2px black solid;
+}
+#containerProjects {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+#containerProjects {
+  padding: 0 5%;
+}
+.fc-primary {
+  color: white;
+}
+.nav-link {
+  margin-right: 0;
+  text-decoration: none;
+  color: white;
+}
+.mb-2 {
+  margin-bottom: 2em;
+}
+.mb-4 {
+  margin-bottom: 4em;
+}
+.mr-2 {
+  margin-right: 1em;
+}
+.cp {
+  cursor: pointer;
+}
+.df {
+  display: flex;
+}
+.column {
+  flex-direction: column;
+}
+.wrap {
+  flex-wrap: wrap;
+}
+.perfectCentered {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.divProject {
+  height: 70vh;
+  width: 80vw;
+  margin-bottom: 4em;
+  margin-right: 0em;
+}
+.imgProject {
+  height: 80%;
+  background-size: cover;
+  border-radius: 0.5em 0.5em 0 0;
+}
+.footerProject {
+  width: 100%;
+  height: 20%;
+  background: #3b5998;
+  color: white;
+  font-family: letratext2;
+  border-radius: 0 0 0.5em 0.5em;
+}
+.textcentrado {
+  text-align: center;
+}
+.txta-center {
+  text-align: center;
+}
+.heightIconos {
+  width: 10vh;
+  height: 10vh;
+  margin: 5vh;
+}
+.textLetter {
+  font-family: textLetter;
+}
+.textLetter2 {
+  font-family: textLetter2;
+}
+.divProyecto {
+  height: 80vh;
+  width: 90vw;
+  margin: 5vh;
+}
+/*Esto es los estilos del carousel*/
+.carousel {
+  position: relative;
+  height: 100%;
+  width: 100%;
+}
+
+.carousel-caption {
+  width: 70%;
+  text-align: center;
+}
+.carousel-control-prev {
+  position: absolute;
+  left: 5%;
+  top: 50%;
+}
+.carousel-control-next {
+  position: absolute;
+  right: 5%;
+  top: 50%;
+}
+.carousel-indicators {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 15;
+  display: flex;
+  justify-content: center;
+  padding-left: 0;
+  margin-right: 15%;
+  margin-left: 15%;
+  list-style: none;
+}
+.carousel-inner {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+.carousel-item {
+  position: relative;
+  display: none;
+  width: 100%;
+  height: 100%;
+  background-repeat: no-repeat;
+  background-size: 100%;
+}
+.carousel-item.active {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.carousel-control-next-icon {
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  background-size: 100%;
+  background-repeat: no-repeat;
+  background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23fff' width='8' height='8' viewBox='0 0 8 8'%3E%3Cpath d='M2.75 0l-1.5 1.5L3.75 4l-2.5 2.5L2.75 8l4-4-4-4z'/%3E%3C/svg%3E");
+}
+.carousel-control-prev-icon {
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  background-size: 100%;
+  background-repeat: no-repeat;
+  background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23fff' width='8' height='8' viewBox='0 0 8 8'%3E%3Cpath d='M5.25 0l-4 4 4 4 1.5-1.5L4.25 4l2.5-2.5L5.25 0z'/%3E%3C/svg%3E");
+}
+
+@media only screen and (min-width: 932px) {
+  #navbar {
+    justify-content: flex-end;
+  }
+  #item1 {
+    background-image: linear-gradient(0deg, rgba(71, 42, 31, 0.82), #352620c9),
+      url("https://media-public.canva.com/MADQ4q85b1w/2/thumbnail_large-1.jpg");
+    background-size: 100% 100%;
+  }
+  #item2 {
+    background-image: linear-gradient(0deg, rgba(71, 42, 31, 0.82), #352620c9),
+      url("https://i.ibb.co/jJCpLnN/imgMusic.jpg");
+    background-size: 100% 100%;
+  }
+  #containerProjects {
+    padding: 0 7%;
+  }
+  .nav-link {
+    margin-right: 5vh;
+  }
+  .divProject {
+    height: 60vh;
+    width: 20vw;
+  }
+}
+@media (min-width: 426px) and (max-width: 768px) {
+  .divProject {
+    height: 60vh;
+    width: 40vw;
+    margin-right: 2em;
+  }
+}
+
+@font-face {
+  font-family: textLetter;
+  src: url("https://uploads.codesandbox.io/uploads/user/f6e86d6a-b63b-4a3b-8c9e-0ce0fd7b9504/muOU-DolceVita.ttf");
+}
+
+@font-face {
+  font-family: textLetter2;
+  src: url("https://uploads.codesandbox.io/uploads/user/f6e86d6a-b63b-4a3b-8c9e-0ce0fd7b9504/prJG-DolceVitaHeavyBold.ttf");
+}
