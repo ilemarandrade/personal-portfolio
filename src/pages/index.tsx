@@ -37,9 +37,12 @@ export default function Home() {
               <Typography variant="h3" fontWeight={600}>
                 Hi, I&apos;m Ilemar👋
               </Typography>
-              <Typography variant="h5" sx={{ position: "relative" }}>
+              <Typography
+                variant="h5"
+                sx={{ position: "relative", width: "calc(100% - 40px)" }}
+              >
                 &quot;Nothing is impossible&quot;
-                <Arrow />
+                <Arrow style={{ right: "-40px" }} />
               </Typography>
             </Grid>
             <Grid
