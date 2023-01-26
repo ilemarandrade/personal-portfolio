@@ -19,7 +19,7 @@ const CarouselOfTools = () => {
     slidesToScroll: 1,
     autoplay: true,
     speed: 2000,
-    autoplaySpeed: 2000,
+    autoplaySpeed: 1000,
     cssEase: "linear",
     variableWidth: true,
     nextArrow: <></>,
