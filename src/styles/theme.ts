@@ -20,10 +20,37 @@ const theme = createTheme({
     MuiSvgIcon: {
       styleOverrides: {
         fontSizeLarge: {
-          fontSize: '64px'
-        }
-      }
-    }
+          fontSize: "64px",
+        },
+      },
+    },
+    MuiTextField: {
+      styleOverrides: {
+        root: {
+          background: "rgb(77, 85, 91)",
+          minHeight: 54,
+          marginBottom: 24,
+          borderRadius: 8,
+        },
+      },
+    },
+    MuiOutlinedInput: {
+      styleOverrides: {
+        root: {
+          borderRadius: 8,
+        },
+      },
+    },
+    MuiButton: {
+      styleOverrides: {
+        root: {
+          height: 54,
+          color: "white",
+          fontWeight: 600,
+          borderRadius: 8,
+        },
+      },
+    },
   },
   palette: {
     primary: {

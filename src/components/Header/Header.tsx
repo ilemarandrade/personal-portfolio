@@ -46,9 +46,11 @@ const Header = () => {
                   {label}
                 </MenuItemsStyles>
               ))}
-              <ButtonGetinTouch variant="outlined">
-                <Link href="/contact">Get in Touch</Link>
-              </ButtonGetinTouch>
+              <Link href="/contact">
+                <ButtonGetinTouch variant="outlined">
+                  Get in Touch
+                </ButtonGetinTouch>
+              </Link>
             </>
           ) : (
             <MenuButton
@@ -65,7 +67,11 @@ const Header = () => {
             {label}
           </MenuItemsStyles>
         ))}
-        <ButtonGetinTouch variant="outlined" sx={{ mt: "0.5rem" }}>
+        <ButtonGetinTouch
+          variant="outlined"
+          sx={{ mt: "0.5rem" }}
+          href="/contact"
+        >
           Get in Touch
         </ButtonGetinTouch>
       </Menu>
