@@ -85,7 +85,9 @@ export default function Home() {
                   animation.worksWithMobileExample.variants.textBox.variants
                 }
               >
-                <Typography variant="body1">The Last project</Typography>
+                <Typography variant="body1">
+                  The last personal project
+                </Typography>
                 <Typography variant="h4" fontWeight={600}>
                   {lastProject.name}
                 </Typography>

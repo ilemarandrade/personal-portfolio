@@ -12,7 +12,7 @@ export default function Home() {
     theme.breakpoints.down("md")
   );
   return (
-    <MainLayout title="Works" bigTitle="All Works">
+    <MainLayout title="Works" bigTitle="All Personal Works">
       <Grid container sx={{ px: { xs: 3, sm: 10, md: 15 }, py: 5 }} spacing={2}>
         {myProjects.map(({ name, img, environment, link }) => (
           <Grid
