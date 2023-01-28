@@ -86,4 +86,5 @@ const myProjects = [
   },
 ];
 
+export const lastProject = myProjects[0];
 export default myProjects;

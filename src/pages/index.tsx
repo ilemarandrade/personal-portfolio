@@ -1,6 +1,6 @@
 import MainLayout from "@/layout/MainLayout";
 import BoxMain from "@/components/BoxMain";
-import { Grid, Theme, Typography, useMediaQuery } from "@mui/material";
+import { Grid, styled, Theme, Typography, useMediaQuery } from "@mui/material";
 import { motion } from "framer-motion";
 import BadgeIcon from "@mui/icons-material/Badge";
 import animation from "@/constants/animation";
@@ -8,7 +8,17 @@ import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import WebIcon from "@mui/icons-material/Web";
 import Arrow from "@/assets/icons/Arrow";
 import BugReportIcon from "@mui/icons-material/BugReport";
+import LanIcon from "@mui/icons-material/Lan";
+import { lastProject } from "@/constants/myProjects";
+import Image from "next/image";
 
+const LastBox = styled(BoxMain)(
+  ({ theme }) => `
+  ${[theme.breakpoints.down("sm")]}{
+    height: auto;
+  }
+`
+);
 export default function Home() {
   const isMobile = useMediaQuery((theme: Theme) =>
     theme.breakpoints.down("md")
@@ -61,7 +71,61 @@ export default function Home() {
           </BoxMain>
         </Grid>
         <Grid item xs={12} sm={6}>
-          <BoxMain />
+          <BoxMain to={lastProject.link}>
+            <Grid
+              container
+              direction="column"
+              sx={{ height: "100%", position: "relative" }}
+              wrap="nowrap"
+            >
+              <Grid
+                item
+                component={motion.div}
+                variants={
+                  animation.worksWithMobileExample.variants.textBox.variants
+                }
+              >
+                <Typography variant="body1">The Last project</Typography>
+                <Typography variant="h4" fontWeight={600}>
+                  {lastProject.name}
+                </Typography>
+              </Grid>
+              <Grid
+                item
+                container
+                justifyContent="center"
+                component={motion.div}
+                initial={animation.worksWithMobileExample.variants.img.initial}
+                variants={
+                  animation.worksWithMobileExample.variants.img.variants
+                }
+                sx={{ mt: 2, position: "relative" }}
+              >
+                <Image src={lastProject.img} alt={lastProject.name} />
+              </Grid>
+            </Grid>
+            <Typography
+              variant="h5"
+              fontWeight={600}
+              sx={{ position: "absolute", bottom: "30px" }}
+              component={motion.h5}
+              variants={
+                animation.worksWithMobileExample.variants.seeMore.variants
+              }
+              initial={
+                animation.worksWithMobileExample.variants.seeMore.initial
+              }
+            >
+              See More
+              <Arrow
+                style={{
+                  position: "relative",
+                  verticalAlign: "middle",
+                  marginLeft: "8px",
+                }}
+              />
+            </Typography>
+          </BoxMain>
         </Grid>
         <Grid
           item
@@ -152,7 +216,7 @@ export default function Home() {
           </Grid>
         </Grid>
         <Grid item xs={12} sm={12} md={6}>
-          <BoxMain to="/contact">
+          <LastBox to="/contact">
             <Grid container spacing={2}>
               <Grid item sm={12}>
                 <Typography>What I Do</Typography>
@@ -181,16 +245,41 @@ export default function Home() {
                   justifyContent="center"
                   alignItems="center"
                   direction="column"
+                  sx={{ mb: { xs: 2, sm: 0 } }}
                 >
-                  <Typography variant="h6" fontWeight={600} align="center">
-                    Test Unit-End2End
+                  <Typography
+                    variant="h6"
+                    fontWeight={600}
+                    align="center"
+                    sx={{ lineHeight: { md: 3.4, sm: "initial" } }}
+                  >
+                    Test Code
                   </Typography>
                   <BugReportIcon fontSize="large" />
+                </Grid>
+                <Grid
+                  item
+                  xs={12}
+                  sm={4}
+                  container
+                  justifyContent="center"
+                  alignItems="center"
+                  direction="column"
+                >
+                  <Typography
+                    variant="h6"
+                    fontWeight={600}
+                    align="center"
+                    sx={{ lineHeight: { md: 3.4, sm: "initial" } }}
+                  >
+                    CI/CD
+                  </Typography>
+                  <LanIcon fontSize="large" />
                 </Grid>
                 <Arrow style={{ right: "40px", bottom: "40px" }} />
               </Grid>
             </Grid>
-          </BoxMain>
+          </LastBox>
         </Grid>
       </Grid>
     </MainLayout>
