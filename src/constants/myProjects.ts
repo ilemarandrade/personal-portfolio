@@ -5,8 +5,17 @@ import landingPage from "@/assets/images/projects/landingPage.png";
 import markdown from "@/assets/images/projects/markdown.png";
 import thoughts from "@/assets/images/projects/thoughts.png";
 import defaultImg from "@/assets/images/projects/default.png";
+import wallet from "@/assets/images/projects/wallet.png";
 
 const myProjects = [
+  {
+    name: "Wallet",
+    slug: "wallet",
+    link: "/works/wallet",
+    environment: "REACT APP WEB",
+    img: wallet,
+    codesandboxLink: "https://wallet-andrade.vercel.app/",
+  },
   {
     name: "Movie Search",
     slug: "movie-search",
@@ -15,15 +24,6 @@ const myProjects = [
     img: pelis,
     codesandboxLink:
       "https://codesandbox.io/embed/busqueda-de-peliculas-fzzh2?fontsize=14&hidenavigation=1&view=preview&theme=dark&view=preview&codemirror=1&hidedevtools=1",
-  },
-  {
-    name: "Wallet",
-    slug: "wallet",
-    link: "/works/wallet",
-    environment: "REACT APP WEB",
-    img: defaultImg,
-    codesandboxLink:
-      "https://codesandbox.io/embed/billetera-zutg6?fontsize=14&hidenavigation=1&view=preview&theme=dark&view=preview&codemirror=1&hidedevtools=1",
   },
   {
     name: "Pomodoro Clock",
