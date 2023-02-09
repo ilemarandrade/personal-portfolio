@@ -12,7 +12,7 @@ const myProjects = [
     name: "Wallet",
     slug: "wallet",
     link: "/works/wallet",
-    environment: "REACT APP WEB",
+    environment: "MERN APP WEB",
     img: wallet,
     codesandboxLink: "https://wallet-andrade.vercel.app/",
   },
