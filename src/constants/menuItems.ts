@@ -1,11 +1,11 @@
 const menuItems = [
   {
     to: "/about",
-    label: "About",
+    label: "about",
   },
   {
     to: "/works",
-    label: "Works",
+    label: "works",
   },
   // {
   //   to: "/resume",
