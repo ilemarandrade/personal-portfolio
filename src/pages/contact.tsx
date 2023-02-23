@@ -1,5 +1,6 @@
 import CarouselOfTools from "@/components/CarouselOfTools";
 import FormContact from "@/components/Forms/Contact";
+import useTranslation from "@/hooks/useTranslation";
 import MainLayout from "@/layout/MainLayout";
 import { Grid, Typography, styled } from "@mui/material";
 import { motion } from "framer-motion";
@@ -22,6 +23,7 @@ const ContainerForm = styled(Grid)`
   }
 `;
 export default function Contact() {
+  const { t } = useTranslation();
   return (
     <MainLayout title="Works">
       <Grid
@@ -43,26 +45,24 @@ export default function Contact() {
         >
           <Grid xs={12} md={4} item>
             <Typography variant="h4" sx={{ mb: 2 }}>
-              Get in Touch ✨
+              {t("contact_me")} ✨
             </Typography>
             <Typography variant="body1" sx={{ mb: 2 }}>
-              Are you looking for a developer to help you with your next
-              project?
+              {t("contact.first_paragraph")}
             </Typography>
             <Typography variant="body1" sx={{ mb: 2 }}>
-              I&apos;d love to hear from you! Whether it&apos;s for a new
-              project, to improve or maintain your project or anything related
-              to software development, I can help! Just contact me on this form
-              or email or whatsapp below and let&apos;s start collaborating!
+              {t("contact.second_paragraph")}
             </Typography>
             <Typography variant="body1" color="text.tertiary" sx={{ mb: 2 }}>
-              WANT TO CALL ME?
+              {t("contact.want_to_call_me")}
             </Typography>
             <Typography variant="body1" sx={{ mb: 2 }}>
-              <a href="https://wa.me/584144505536">Can do it by Whatsapp</a>
+              <a href="https://wa.me/584144505536">
+                {t("contact.can_do_it_by_ws")}
+              </a>
             </Typography>
             <Typography variant="body1" color="text.tertiary" sx={{ mb: 2 }}>
-              JUST WANT TO EMAIL ME?
+              {t("contact.just_want_to_email_me")}
             </Typography>
             <Typography variant="body1">
               <a href="mailto:ilemarandrade@gmail.com">
