@@ -1,0 +1,39 @@
+{
+  "main_titles": {
+    "software_developer": "Desarrollador de Software",
+    "about_me": "Acerca de mí",
+    "all_personal_works": "Todos Mis Trabajos Personales"
+  },
+  "about_me": {
+    "first_paragraph": "Soy un soñador que no cree en lo imposible, persistente y comprometido con mis metas y proyectos. Resolver problemas y dar soluciones efectivas, prácticas y con un enfoque trascendental son mis motivaciones a la hora de desempeñar mi rol como desarrollador web; Desfragmentar grandes problemas en pequeños desafíos diarios es la solución para mí.",
+    "second_paragraph": "Disfruto aprendiendo cosas nuevas, pasando tiempo con mi guitarra y cantando con mi esposa, jugar al baloncesto, iluminar todo lo que puedo y, por supuesto, todos los momentos destacados de la NBA.",
+    "third_paragraph": "Me encanta enseñar casi cualquier cosa, por eso también disfruto ser mentor en la academia de desarrolladores de software Swordvoice; En mi comunidad, también con mi esposa doy clases de música sin fines de lucro a jóvenes que quieren aumentar su conocimiento de un instrumento o de sus voces. Deseo algún día ser padre y también enseñarle todo lo que sé y guiarlo a alcanzar todos sus sueños con perseverancia."
+  },
+  "contact": {
+    "first_paragraph": "¿Estás buscando un desarrollador que te ayude con tu próximo proyecto?",
+    "second_paragrah": "¡Me encantaría saber de ti! Ya sea para un nuevo proyecto, para mejorar o mantener su proyecto o cualquier cosa relacionada con el desarrollo de software, ¡puedo ayudar! ¡Solo contácteme en este formulario o correo electrónico o whatsapp a continuación y comencemos a colaborar!",
+    "want_to_call_me": "¿QUIERES LLAMARME?",
+    "can_do_it_by_ws": "Puedes hacerlo por Whatsapp",
+    "just_want_to_email_me": "¿SOLO QUIERES ENVIARME UN CORREO ELECTRÓNICO?",
+    "form": {
+      "button": "Enviar mensaje",
+      "name": "Nombre",
+      "email": "Correo",
+      "type_your_message": "Escribe tu mensaje"
+    }
+  },
+  "contact_me": "Contactame",
+  "about": "Conoceme",
+  "works": "Trabajos",
+  "say_hello": " Hola, soy Ilemar👋",
+  "nothing_is_imposible": "Nada es Imposible",
+  "learn_more_about_me": "Aprende <br/> mas <br/> de mi",
+  "my_work": "Mi trabajo",
+  "view_all_works": "Revisa<br /> todo mis <br /> trabajos",
+  "lets_connect": "Conectemos",
+  "what_i_do": "Que hago",
+  "web_development": "Desarrollo <br /> Web",
+  "test_code": "Test a código",
+  "ci_cd": "CI/CD",
+  "the_last_personal_project": "Ultimo proyecto personal"
+}
