@@ -3,6 +3,7 @@ import { Grid, Typography, styled } from "@mui/material";
 import { motion } from "framer-motion";
 import BoxImage from "@/components/BoxImage";
 import galery from "@/constants/galery";
+import useTranslation from "@/hooks/useTranslation";
 
 const Me = styled("div")`
   background-image: url(/images/ile-without-background.png);
@@ -12,8 +13,9 @@ const Me = styled("div")`
 `;
 
 export default function About() {
+  const { t } = useTranslation();
   return (
-    <MainLayout title="Works" bigTitle="About me">
+    <MainLayout title="Works" bigTitle={t("main_titles.about_me")}>
       <Grid
         container
         sx={{
@@ -54,26 +56,13 @@ export default function About() {
             }}
           >
             <Typography variant="body1" fontSize={22} sx={{ mb: 1 }}>
-              I am a dreamer who does not believe in the impossible, persistent
-              and committed to my goals and projects. Solving problems and
-              giving effective, practical solutions with a transcendental
-              approach are my motivations when performing my role as a web
-              developer; Defragmenting large problems into small daily
-              challenges is the solution for me.
+              {t("about_me.first_paragraph")}
             </Typography>
             <Typography variant="body1" fontSize={22} sx={{ mb: 1 }}>
-              I enjoy learning new things, spending time with my guitar and
-              singing along with my wife, play basketball, lighting up as much
-              as I can and of course all the NBA highlights.
+              {t("about_me.second_paragraph")}
             </Typography>
             <Typography variant="body1" fontSize={22} sx={{ mb: 1 }}>
-              I love teaching almost anything, that&apos;s why I also enjoy
-              being a mentor at the Swordvoice software developer academy; In my
-              community, also with my wife I teach music for non profit to young
-              people who want to increase their knowledge of an instrument or
-              their voices. I wish one day to be a father and also teach him
-              everything I know and guide him to achieve all his dreams with
-              perseverance.
+              {t("about_me.third_paragraph")}
             </Typography>
           </Grid>
         </Grid>

@@ -11,6 +11,7 @@ import BugReportIcon from "@mui/icons-material/BugReport";
 import LanIcon from "@mui/icons-material/Lan";
 import { lastProject } from "@/constants/myProjects";
 import Image from "next/image";
+import useTranslation from "@/hooks/useTranslation";
 
 const LastBox = styled(BoxMain)(
   ({ theme }) => `
@@ -19,12 +20,13 @@ const LastBox = styled(BoxMain)(
   }
 `
 );
-export default function Home() {
+export default function Home(props: any) {
+  const { t } = useTranslation();
   const isMobile = useMediaQuery((theme: Theme) =>
     theme.breakpoints.down("md")
   );
   return (
-    <MainLayout title="Home" bigTitle="Software Developer">
+    <MainLayout title="Home" bigTitle={t("main_titles.software_developer")}>
       <Grid container sx={{ px: { xs: 3, sm: 10, md: 15 }, py: 5 }} spacing={2}>
         <Grid
           item
@@ -45,13 +47,13 @@ export default function Home() {
               }
             >
               <Typography variant="h3" fontWeight={600}>
-                Hi, I&apos;m Ilemar👋
+                {t("say_hello")}
               </Typography>
               <Typography
                 variant="h5"
                 sx={{ position: "relative", width: "calc(100% - 40px)" }}
               >
-                &quot;Nothing is impossible&quot;
+                &quot;{t("nothing_is_imposible")}&quot;
                 <Arrow style={{ right: "-40px" }} />
               </Typography>
             </Grid>
@@ -63,10 +65,13 @@ export default function Home() {
                 animation.enterTextFromBottom.variants.secondBox.variants
               }
             >
-              <Typography variant="h3" fontWeight={600}>
-                Learn <br /> more
-                <br /> about me
-              </Typography>
+              <Typography
+                variant="h3"
+                fontWeight={600}
+                dangerouslySetInnerHTML={{
+                  __html: t("learn_more_about_me"),
+                }}
+              />
             </Grid>
           </BoxMain>
         </Grid>
@@ -86,7 +91,7 @@ export default function Home() {
                 }
               >
                 <Typography variant="body1">
-                  The last personal project
+                  {t("the_last_personal_project")}
                 </Typography>
                 <Typography variant="h4" fontWeight={600}>
                   {lastProject.name}
@@ -154,7 +159,7 @@ export default function Home() {
                 fontWeight={600}
                 sx={{ position: "relative" }}
               >
-                My work
+                {t("my_work")}
                 <Arrow />
               </Typography>
             </Grid>
@@ -168,11 +173,11 @@ export default function Home() {
                 animation.enterTextFromBottom.variants.secondBox.variants
               }
             >
-              <Typography variant="h4" fontWeight={600}>
-                View <br />
-                All My
-                <br /> Works
-              </Typography>
+              <Typography
+                variant="h4"
+                fontWeight={600}
+                dangerouslySetInnerHTML={{ __html: t("view_all_works") }}
+              />
             </Grid>
           </BoxMain>
         </Grid>
@@ -211,7 +216,7 @@ export default function Home() {
                 variants={{ hover: { opacity: 1 } }}
                 initial={{ opacity: isMobile ? 1 : 0 }}
               >
-                Let&apos;s connect
+                {t("lets_connect")}
               </Typography>
             </Grid>
             <Arrow style={{ right: "40px" }} />
@@ -221,7 +226,7 @@ export default function Home() {
           <LastBox to="/contact">
             <Grid container spacing={2}>
               <Grid item sm={12}>
-                <Typography>What I Do</Typography>
+                <Typography>{t("what_i_do")}</Typography>
               </Grid>
               <Grid item container>
                 <Grid
@@ -234,9 +239,12 @@ export default function Home() {
                   direction="column"
                   sx={{ mb: { xs: 2, sm: 0 } }}
                 >
-                  <Typography variant="h6" fontWeight={600} align="center">
-                    Web Development
-                  </Typography>
+                  <Typography
+                    variant="h6"
+                    fontWeight={600}
+                    align="center"
+                    dangerouslySetInnerHTML={{ __html: t("web_development") }}
+                  />
                   <WebIcon fontSize="large" />
                 </Grid>
                 <Grid
@@ -255,7 +263,7 @@ export default function Home() {
                     align="center"
                     sx={{ lineHeight: { md: 3.4, sm: "initial" } }}
                   >
-                    Test Code
+                    {t("test_code")}
                   </Typography>
                   <BugReportIcon fontSize="large" />
                 </Grid>
@@ -274,7 +282,7 @@ export default function Home() {
                     align="center"
                     sx={{ lineHeight: { md: 3.4, sm: "initial" } }}
                   >
-                    CI/CD
+                    {t("ci_cd")}
                   </Typography>
                   <LanIcon fontSize="large" />
                 </Grid>

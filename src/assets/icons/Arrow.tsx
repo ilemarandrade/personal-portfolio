@@ -34,16 +34,16 @@ const Arrow = ({ className, style }: Props) => (
         r="96"
         fill="none"
         stroke="rgb(224, 223, 220)"
-        stroke-miterlimit="10"
-        stroke-width="16"
+        strokeMiterlimit="10"
+        strokeWidth="16"
       ></circle>
       <polyline
         points="134.1 161.9 168 128 134.1 94.1"
         fill="none"
         stroke="rgb(224, 223, 220)"
-        stroke-linecap="round"
+        strokeLinecap="round"
         strokeLinejoin="round"
-        stroke-width="16"
+        strokeWidth="16"
       ></polyline>
       <line
         x1="88"
@@ -52,9 +52,9 @@ const Arrow = ({ className, style }: Props) => (
         y2="128"
         fill="none"
         stroke="rgb(224, 223, 220)"
-        stroke-linecap="round"
+        strokeLinecap="round"
         strokeLinejoin="round"
-        stroke-width="16"
+        strokeWidth="16"
       ></line>
     </g>
   </ArrowStyled>

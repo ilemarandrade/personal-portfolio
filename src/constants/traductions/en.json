@@ -1,0 +1,39 @@
+{
+  "main_titles": {
+    "software_developer": "Software Developer",
+    "about_me": "About me",
+    "all_personal_works": "All Personal Works"
+  },
+  "about_me": {
+    "first_paragraph": "I am a dreamer who does not believe in the impossible, persistent and committed to my goals and projects. Solving problems and giving effective, practical solutions with a transcendental approach are my motivations when performing my role as a web developer; Defragmenting large problems into small daily challenges is the solution for me.",
+    "second_paragraph": "I enjoy learning new things, spending time with my guitar and singing along with my wife, play basketball, lighting up as much as I can and of course all the NBA highlights.",
+    "third_paragraph": "I love teaching almost anything, that's why I also enjoy being a mentor at the Swordvoice software developer academy; In my community, also with my wife I teach music for non profit to young people who want to increase their knowledge of an instrument or their voices. I wish one day to be a father and also teach him everything I know and guide him to achieve all his dreams with perseverance."
+  },
+  "contact": {
+    "first_paragraph": "Are you looking for a developer to help you with your next project?",
+    "second_paragraph": "I'd love to hear from you! Whether it's for a new project, to improve or maintain your project or anything related to software development, I can help! Just contact me on this form or email or whatsapp below and let's start collaborating!",
+    "want_to_call_me": "WANT TO CALL ME??",
+    "can_do_it_by_ws": "Can do it by Whatsapp",
+    "just_want_to_email_me": "JUST WANT TO EMAIL ME?",
+    "form": {
+      "button": "Send Message",
+      "name": "Name",
+      "email": "Email",
+      "type_your_message": "Type your message"
+    }
+  },
+  "contact_me": "Get it touch",
+  "about": "About",
+  "works": "Works",
+  "say_hello": " Hi, I'm Ilemar👋",
+  "nothing_is_imposible": "Nothing is imposible",
+  "learn_more_about_me": "Learn <br/> More <br/> About me",
+  "my_work": "My work",
+  "view_all_works": "View <br /> All My <br /> Works",
+  "lets_connect": "Let's connect",
+  "what_i_do": "What I do",
+  "web_development": "Web <br /> Development",
+  "test_code": "Test Code",
+  "ci_cd": "CI/CD",
+  "the_last_personal_project": "The last personal project"
+}
