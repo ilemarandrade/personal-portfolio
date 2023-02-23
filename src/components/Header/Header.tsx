@@ -13,8 +13,11 @@ import {
 } from "./styles";
 import Link from "next/link";
 import { motion } from "framer-motion";
+import useTranslation from "@/hooks/useTranslation";
+import Language from "../Languages/indext";
 
 const Header = () => {
+  const { t } = useTranslation();
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const isMobile = useMediaQuery((theme: Theme) =>
     theme.breakpoints.down("md")
@@ -39,16 +42,17 @@ const Header = () => {
           justifyContent="flex-end"
           sx={{ width: { xs: "initial", sm: "100%" } }}
         >
+          <Language />
           {!isMobile ? (
             <>
               {menuItems.map(({ label, to }) => (
                 <MenuItemsStyles href={to} key={label}>
-                  {label}
+                  {t(label)}
                 </MenuItemsStyles>
               ))}
               <Link href="/contact">
                 <ButtonGetinTouch variant="outlined">
-                  Get in Touch
+                  {t("contact_me")}
                 </ButtonGetinTouch>
               </Link>
             </>
@@ -64,7 +68,7 @@ const Header = () => {
         <Avatar alt="Ilemar Andrade" src={ile} />
         {menuItems.map(({ label, to }) => (
           <MenuItemsStyles href={to} key={label}>
-            {label}
+            {t(label)}
           </MenuItemsStyles>
         ))}
         <ButtonGetinTouch
@@ -72,7 +76,7 @@ const Header = () => {
           sx={{ mt: "0.5rem" }}
           href="/contact"
         >
-          Get in Touch
+          {t("contact_me")}
         </ButtonGetinTouch>
       </Menu>
     </>
