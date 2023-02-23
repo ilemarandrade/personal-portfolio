@@ -19,7 +19,7 @@ const useTranslation = () => {
       return acumulator[key] as langType;
     }, lang);
 
-    return findValue;
+    return findValue || "";
   };
   return { t, language: locale, asPath, changeTo: isEnglish ? "es" : "en" };
 };

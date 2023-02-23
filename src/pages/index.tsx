@@ -68,7 +68,9 @@ export default function Home(props: any) {
               <Typography
                 variant="h3"
                 fontWeight={600}
-                dangerouslySetInnerHTML={{ __html: t("learn_more_about_me") }}
+                dangerouslySetInnerHTML={{
+                  __html: t("learn_more_about_me"),
+                }}
               />
             </Grid>
           </BoxMain>
