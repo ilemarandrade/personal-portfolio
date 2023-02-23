@@ -6,13 +6,15 @@ import animation from "@/constants/animation";
 import Arrow from "@/assets/icons/Arrow";
 import Image from "next/image";
 import myProjects from "@/constants/myProjects";
+import useTranslation from "@/hooks/useTranslation";
 
 export default function Home() {
+  const { t } = useTranslation();
   const isMobile = useMediaQuery((theme: Theme) =>
     theme.breakpoints.down("md")
   );
   return (
-    <MainLayout title="Works" bigTitle="All Personal Works">
+    <MainLayout title="Works" bigTitle={t("main_titles.all_personal_works")}>
       <Grid container sx={{ px: { xs: 3, sm: 10, md: 15 }, py: 5 }} spacing={2}>
         {myProjects.map(({ name, img, environment, link }) => (
           <Grid
