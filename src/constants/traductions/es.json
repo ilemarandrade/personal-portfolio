@@ -22,6 +22,24 @@
       "type_your_message": "Escribe tu mensaje"
     }
   },
+  "projects": {
+    "wallet": {
+      "first_paragraph": "Desarrolle una app web con el fin de registrar ingresos y gastos, tener un seguimiento del historial de los movimientos del usuario y eliminar movimientos erróneos restableciendo el saldo correspondiente, se puede disfrutar de dicho servicio con un simple registro en la plataforma y seguidamente hacer login, además es una app multiidioma el cual posee ingles y español.",
+      "second_paragraph": "En el proceso de desarrollo pude aplicar un código limpio y escalable tanto en el frontend como en el backend siendo este último entorno de desarrollo un conocimiento reciente el cual pude aplicar en un ambiente real siendo fundamental para el óptimo funcionamiento de la app."
+    },
+    "movie_search": {
+      "first_paragraph": "Este proyecto fue donde practique por primera vez consumir servicios de una api el cual utilice esta api publica https://omdbapi.com/.",
+      "second_paragraph": "Este proyecto le permite buscar y ver una descripción general de la película seleccionada."
+    },
+    "drum_machine": {
+      "first_paragraph": "Este proyecto es parte de los proyectos para obtener mi certificado en \"Front End Development Libraries\", en esta caja de ritmos lo que más puedo destacar es el uso de un estado global manejado por redux y la etiqueta de audio para obtener un sonido después de hacer clic cada botón.",
+      "second_paragraph": "Para que puedas usarlo, debes encenderlo y tienes dos bancos de sonido disponibles para comenzar a hacer música con la combinación de ellos."
+    },
+    "calculator": {
+      "first_paragraph": "Este proyecto es parte de los proyectos para obtener mi certificado en \"Front End Development Libraries\"."
+    },
+    "landing_page": "Este proyecto fue con el propósito de practicar la maquetación de un sitio web."
+  },
   "contact_me": "Contactame",
   "about": "Conoceme",
   "works": "Trabajos",
@@ -35,5 +53,6 @@
   "web_development": "Desarrollo <br /> Web",
   "test_code": "Test a código",
   "ci_cd": "CI/CD",
-  "the_last_personal_project": "Ultimo proyecto personal"
+  "the_last_personal_project": "Ultimo proyecto personal",
+  "dependencies": "Dependencias"
 }

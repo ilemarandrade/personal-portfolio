@@ -22,6 +22,24 @@
       "type_your_message": "Type your message"
     }
   },
+  "projects": {
+    "wallet": {
+      "first_paragraph": "Develop a web app in order to record income and expenses, keep track of the user's movement history and eliminate erroneous movements by restoring the corresponding balance, you can enjoy this service with a simple registration on the platform and then login, It is also a multilanguage app which has English and Spanish.",
+      "second_paragraph": "In the development process I was able to apply a clean and scalable code both in the frontend and in the backend, the latter development environment being recent knowledge which I could apply in a real environment, being essential for the optimal functioning of the app."
+    },
+    "movie_search": {
+      "first_paragraph": "This project was where I first practiced consuming services from an API, which I did with this public API https://omdbapi.com/.",
+      "second_paragraph": "This project allows you to search and view an overview of the selected movie."
+    },
+    "drum_machine": {
+      "first_paragraph": "This project is part of the projects to obtain my certificate in \"Front End Development Libraries\", in this drum machine what I can highlight the most is the use of a global state managed by redux and the audio tag to obtain a sound after clicking each button.",
+      "second_paragraph": "Before you can use it, you have to turn it on and you have two sound banks available to start making music with the combination of them."
+    },
+    "calculator": {
+      "first_paragraph": "This project is part of the projects to obtain my certificate in \"Front End Development Libraries\"."
+    },
+    "landing_page": "This project was for the purpose of practicing the layout of a website."
+  },
   "contact_me": "Get it touch",
   "about": "About",
   "works": "Works",
@@ -35,5 +53,6 @@
   "web_development": "Web <br /> Development",
   "test_code": "Test Code",
   "ci_cd": "CI/CD",
-  "the_last_personal_project": "The last personal project"
+  "the_last_personal_project": "The last personal project",
+  "dependencies": "Dependencies"
 }
