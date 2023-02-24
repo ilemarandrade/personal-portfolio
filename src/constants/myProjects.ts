@@ -14,7 +14,55 @@ const myProjects = [
     link: "/works/wallet",
     environment: "MERN APP WEB",
     img: wallet,
-    codesandboxLink: "https://wallet-andrade.vercel.app/",
+    link_external: "https://wallet-andrade.vercel.app/",
+    link_github: "https://github.com/ilemarandrade/wallet",
+    description: [
+      "projects.wallet.first_paragraph",
+      "projects.wallet.second_paragraph",
+    ],
+    dependencies: [
+      {
+        environment: "Frontend",
+        tools: [
+          "react",
+          "react-dom",
+          "react-hook-form",
+          "react-hot-toast",
+          "react-i18next",
+          "react-redux",
+          "react-router-dom",
+          "react-scripts",
+          "react-text-mask",
+          "@hookform/resolvers",
+          "@material-ui/core",
+          "@material-ui/icons",
+          "@tanstack/react-query",
+          "@tanstack/react-query-devtools",
+          "@testing-library/jest-dom",
+          "@testing-library/react",
+          "@testing-library/user-event",
+          "axios",
+          "currency.js",
+          "i18next",
+          "moment",
+          "styled-components",
+          "text-mask-addons",
+          "yup",
+        ],
+      },
+      {
+        environment: "Backend",
+        tools: [
+          "express",
+          "cors",
+          "dotenv",
+          "jsonwebtoken",
+          "moment",
+          "mongoose",
+          "mongodb",
+        ],
+      },
+    ],
   },
   {
     name: "Movie Search",
@@ -24,6 +72,22 @@ const myProjects = [
     img: pelis,
     codesandboxLink:
       "https://codesandbox.io/embed/busqueda-de-peliculas-fzzh2?fontsize=14&hidenavigation=1&view=preview&theme=dark&view=preview&codemirror=1&hidedevtools=1",
+    description: [
+      "projects.movie_search.first_paragraph",
+      "projects.movie_search.second_paragraph",
+    ],
+    dependencies: [
+      {
+        environment: "Frontend",
+        tools: [
+          "axios",
+          "react",
+          "react-dom",
+          "react-router-dom",
+          "react-scripts",
+        ],
+      },
+    ],
   },
   {
     name: "Pomodoro Clock",
@@ -31,8 +95,22 @@ const myProjects = [
     link: "/works/pomodoro-clock",
     environment: "REACT APP WEB",
     img: defaultImg,
+    description: ["projects.calculator.first_paragraph"],
     codesandboxLink:
       "https://codesandbox.io/embed/reloj-pomodoro-5tgjr?fontsize=14&hidenavigation=1&view=preview&theme=dark&view=preview&codemirror=1&hidedevtools=1",
+    dependencies: [
+      {
+        environment: "Frontend",
+        tools: [
+          "react",
+          "react-dom",
+          "react-helmet",
+          "react-redux",
+          "react-scripts",
+          "redux",
+        ],
+      },
+    ],
   },
   {
     name: "Drum Machine",
@@ -42,6 +120,23 @@ const myProjects = [
     img: drum,
     codesandboxLink:
       "https://codesandbox.io/embed/drum-pad-q8dds?fontsize=14&hidenavigation=1&view=preview&theme=dark&view=preview&codemirror=1&hidedevtools=1",
+    description: [
+      "projects.drum_machine.first_paragraph",
+      "projects.drum_machine.second_paragraph",
+    ],
+    dependencies: [
+      {
+        environment: "Frontend",
+        tools: [
+          "react",
+          "react-dom",
+          "react-helmet",
+          "react-redux",
+          "react-scripts",
+          "redux",
+        ],
+      },
+    ],
   },
   /*{
         name: "Memory Game",
@@ -56,24 +151,29 @@ const myProjects = [
     img: calculator,
     codesandboxLink:
       "https://codesandbox.io/embed/calculadora-5kl0f?fontsize=14&hidenavigation=1&view=preview&theme=dark&view=preview&codemirror=1&hidedevtools=1",
-  },
-  {
-    name: "Landing Page",
-    slug: "landing-page",
-    link: "/works/landing-page",
-    environment: "REACT APP WEB",
-    img: landingPage,
-    codesandboxLink:
-      "https://codesandbox.io/embed/landing-page-edi-react-bq2hq?fontsize=14&hidenavigation=1&view=preview&theme=dark&view=preview&codemirror=1&hidedevtools=1",
+    description: ["projects.calculator.first_paragraph"],
+    dependencies: [
+      {
+        environment: "Frontend",
+        tools: ["react", "react-dom", "react-router-dom", "react-scripts"],
+      },
+    ],
   },
   {
     name: "New Quote",
     slug: "new-quote",
     link: "/works/new-quote",
-    environment: "REACT APP WEB",
+    environment: "Jquery WEB",
     img: thoughts,
     codesandboxLink:
       "https://codesandbox.io/embed/mensajes-con-autores-evet4?fontsize=14&hidenavigation=1&view=preview&theme=dark&view=preview&codemirror=1&hidedevtools=1",
+    description: ["projects.calculator.first_paragraph"],
+    dependencies: [
+      {
+        environment: "Frontend",
+        tools: ["jquery"],
+      },
+    ],
   },
   {
     name: "MarkDown",
@@ -83,6 +183,29 @@ const myProjects = [
     img: markdown,
     codesandboxLink:
       "https://codesandbox.io/embed/markedjs-51q3x?fontsize=14&hidenavigation=1&view=preview&theme=dark&view=preview&codemirror=1&hidedevtools=1",
+    dependencies: [
+      {
+        environment: "Frontend",
+        tools: ["react", "react-dom", "react-scripts", "dompurify", "marked"],
+      },
+    ],
+    description: ["projects.calculator.first_paragraph"],
+  },
+  {
+    name: "Landing Page",
+    slug: "landing-page",
+    link: "/works/landing-page",
+    environment: "REACT APP WEB",
+    img: landingPage,
+    codesandboxLink:
+      "https://codesandbox.io/embed/landing-page-edi-react-bq2hq?fontsize=14&hidenavigation=1&view=preview&theme=dark&view=preview&codemirror=1&hidedevtools=1",
+    dependencies: [
+      {
+        environment: "Frontend",
+        tools: ["react", "react-dom", "react-scripts"],
+      },
+    ],
+    description: ["projects.landing_page"],
   },
 ];
 
