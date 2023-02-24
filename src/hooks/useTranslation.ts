@@ -16,7 +16,7 @@ const useTranslation = () => {
         findValue = acumulator[key];
         return acumulator;
       }
-      return acumulator[key] as langType;
+      return (acumulator[key] as langType) || "";
     }, lang);
 
     return findValue || "";

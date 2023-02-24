@@ -3,6 +3,7 @@ import { Grid, Typography, styled } from "@mui/material";
 import myProjects from "@/constants/myProjects";
 import { motion } from "framer-motion";
 import { useRouter } from "next/router";
+import useTranslation from "@/hooks/useTranslation";
 
 const IframeStyles = styled("iframe")`
   width: 100%;
@@ -14,10 +15,19 @@ interface Props {
 }
 export default function Home({ project }: Props) {
   const router = useRouter();
+  const { t } = useTranslation();
   if (router.isFallback) {
-    return <div>Loading...</div>
+    return <div>Loading...</div>;
   }
-  const { environment, name, codesandboxLink } = project;
+  const {
+    environment,
+    name,
+    codesandboxLink,
+    description,
+    link_external,
+    link_github,
+    dependencies,
+  } = project;
   return (
     <MainLayout title="Works">
       <Grid
@@ -28,7 +38,12 @@ export default function Home({ project }: Props) {
         <Grid item>
           <Typography
             variant="body1"
-            sx={{ mb: 2, position: "relative", left: "-100%", minWidth: "280px" }}
+            sx={{
+              mb: 2,
+              position: "relative",
+              left: "-100vw",
+              minWidth: "280px",
+            }}
             component={motion.p}
             animate={{ left: 0, transition: { delay: 1 } }}
           >
@@ -36,24 +51,146 @@ export default function Home({ project }: Props) {
           </Typography>
           <Typography
             variant="h2"
-            sx={{ position: "relative", left: "-150%",  minWidth: "280px" }}
+            sx={{ position: "relative", left: "-150%", minWidth: "280px" }}
             component={motion.h2}
             animate={{ left: 0, transition: { delay: 1.2 } }}
+            color="primary"
           >
             {name}
           </Typography>
+          {description?.length &&
+            description.map((text: string) => (
+              <Typography
+                variant="body1"
+                key={text}
+                sx={{
+                  mb: 2,
+                  position: "relative",
+                  left: "-100vw",
+                  minWidth: "280px",
+                }}
+                component={motion.p}
+                animate={{ left: 0, transition: { delay: 1 } }}
+              >
+                {t(text)}
+              </Typography>
+            ))}
+          {link_external && (
+            <Typography
+              variant="body1"
+              sx={{
+                mb: 2,
+                position: "relative",
+                left: "-100vw",
+                minWidth: "280px",
+              }}
+              component={motion.p}
+              animate={{ left: 0, transition: { delay: 1 } }}
+            >
+              Link:{" "}
+              <Typography
+                variant="body1"
+                sx={{
+                  textDecoration: "underline",
+                }}
+                target="_blank"
+                rel="noreferrer"
+                component="a"
+                href={link_external}
+              >
+                {link_external}
+              </Typography>
+            </Typography>
+          )}
+          {link_github && (
+            <>
+              <Typography
+                variant="body1"
+                sx={{
+                  mb: 2,
+                  position: "relative",
+                  left: "-100vw",
+                  minWidth: "280px",
+                }}
+                component={motion.p}
+                animate={{ left: 0, transition: { delay: 1 } }}
+              >
+                Github:{" "}
+                <Typography
+                  variant="body1"
+                  sx={{
+                    textDecoration: "underline",
+                  }}
+                  href={link_github}
+                  target="_blank"
+                  rel="noreferrer"
+                  component="a"
+                >
+                  {link_github}
+                </Typography>
+              </Typography>
+            </>
+          )}
+          {dependencies?.length && (
+            <>
+              <Typography
+                variant="body1"
+                sx={{
+                  mb: 2,
+                  position: "relative",
+                  left: "-100vw",
+                  minWidth: "280px",
+                  textTransform: "uppercase",
+                }}
+                component={motion.p}
+                animate={{ left: 0, transition: { delay: 1 } }}
+                color="primary"
+              >
+                {t("dependencies")}
+              </Typography>
+              {dependencies.map(
+                ({
+                  environment: dependenciesEnvironment,
+                  tools,
+                }: {
+                  environment: string;
+                  tools: string[];
+                }) => (
+                  <Typography
+                    key={dependenciesEnvironment}
+                    variant="body1"
+                    sx={{
+                      mb: 2,
+                      position: "relative",
+                      left: "-100vw",
+                      minWidth: "280px",
+                    }}
+                    component={motion.p}
+                    animate={{ left: 0, transition: { delay: 1 } }}
+                  >
+                    {dependenciesEnvironment}:{" "}
+                    <Typography color="primary" component="span">
+                      {tools.join(", ")}
+                    </Typography>
+                  </Typography>
+                )
+              )}
+            </>
+          )}
         </Grid>
       </Grid>
-      <motion.div
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1, transition: { delay: 1.5 } }}
-      >
-        <IframeStyles
-          src={codesandboxLink}
-          allow="accelerometer; ambient-light-sensor; camera; encrypted-media; geolocation; gyroscope; hid; microphone; midi; payment; usb; vr; xr-spatial-tracking"
-          sandbox="allow-forms allow-modals allow-popups allow-presentation allow-same-origin allow-scripts"
-        ></IframeStyles>
-      </motion.div>
+      {codesandboxLink && (
+        <motion.div
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1, transition: { delay: 1.5 } }}
+        >
+          <IframeStyles
+            src={codesandboxLink}
+            allow="accelerometer; ambient-light-sensor; camera; encrypted-media; geolocation; gyroscope; hid; microphone; midi; payment; usb; vr; xr-spatial-tracking"
+            sandbox="allow-forms allow-modals allow-popups allow-presentation allow-same-origin allow-scripts"
+          ></IframeStyles>
+        </motion.div>
+      )}
     </MainLayout>
   );
 }
