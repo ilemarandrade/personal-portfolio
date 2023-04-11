@@ -6,6 +6,7 @@ import markdown from "@/assets/images/projects/markdown.png";
 import thoughts from "@/assets/images/projects/thoughts.png";
 import defaultImg from "@/assets/images/projects/default.png";
 import wallet from "@/assets/images/projects/wallet.png";
+import rickAndMorty from "@/assets/images/projects/rickAndMorty.png";
 
 const myProjects = [
   {
@@ -60,6 +61,54 @@ const myProjects = [
           "moment",
           "mongoose",
           "mongodb",
+        ],
+      },
+    ],
+  },
+  {
+    name: "Rick & Morty",
+    slug: "rick-&-morty-memory-game",
+    link: "/works/rick-&-morty-memory-game",
+    environment: "REACT APP WEB",
+    img: rickAndMorty,
+    link_external: "https://rick-and-morty-memory-game-v2.vercel.app/",
+    link_github: "https://github.com/ilemarandrade/rick-and-morty-memory-game",
+    description: "projects.memory_game",
+    isMarkdown: true,
+    dependencies: [
+      {
+        environment: "Frontend",
+        tools: [
+          "axios",
+          "react",
+          "react-dom",
+          "react-router-dom",
+          "react-scripts",
+          "sass",
+          "typescript",
+          "@testing-library/jest-dom",
+          "@testing-library/react",
+          "@testing-library/user-event",
+          "@types/jest",
+          "@types/node",
+          "@types/react",
+          "@types/react-dom",
+          "web-vitals",
+          "@storybook/addon-actions",
+          "@storybook/addon-essentials",
+          "@storybook/addon-interactions",
+          "@storybook/addon-links",
+          "@storybook/builder-webpack5",
+          "@storybook/manager-webpack5",
+          "@storybook/node-logger",
+          "@storybook/preset-create-react-app",
+          "@storybook/react",
+          "@storybook/testing-library",
+          "@testing-library/cypress",
+          "@types/react-router-dom",
+          "babel-plugin-named-exports-order",
+          "cypress",
+          "msw",
         ],
       },
     ],

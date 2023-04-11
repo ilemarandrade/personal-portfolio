@@ -1,5 +1,5 @@
 import useTranslation from "@/hooks/useTranslation";
-import { ButtonBase, IconButton, styled } from "@mui/material";
+import { ButtonBase, styled } from "@mui/material";
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";

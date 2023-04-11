@@ -4,6 +4,7 @@ import myProjects from "@/constants/myProjects";
 import { motion } from "framer-motion";
 import { useRouter } from "next/router";
 import useTranslation from "@/hooks/useTranslation";
+import ReactMarkdown from "react-markdown";
 
 const IframeStyles = styled("iframe")`
   width: 100%;
@@ -13,6 +14,7 @@ const IframeStyles = styled("iframe")`
 interface Props {
   project: any;
 }
+
 export default function Home({ project }: Props) {
   const router = useRouter();
   const { t } = useTranslation();
@@ -27,7 +29,10 @@ export default function Home({ project }: Props) {
     link_external,
     link_github,
     dependencies,
+    isMarkdown,
+    markdown,
   } = project;
+
   return (
     <MainLayout title="Works">
       <Grid
@@ -59,6 +64,7 @@ export default function Home({ project }: Props) {
             {name}
           </Typography>
           {description?.length &&
+            !isMarkdown &&
             description.map((text: string) => (
               <Typography
                 variant="body1"
@@ -177,6 +183,7 @@ export default function Home({ project }: Props) {
               )}
             </>
           )}
+          {isMarkdown && <ReactMarkdown>{t(description)}</ReactMarkdown>}
         </Grid>
       </Grid>
       {codesandboxLink && (
