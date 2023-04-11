@@ -20,7 +20,7 @@ const LastBox = styled(BoxMain)(
   }
 `
 );
-export default function Home(props: any) {
+export default function Home() {
   const { t } = useTranslation();
   const isMobile = useMediaQuery((theme: Theme) =>
     theme.breakpoints.down("md")

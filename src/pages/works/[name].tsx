@@ -1,6 +1,6 @@
 import MainLayout from "@/layout/MainLayout";
 import { Grid, Typography, styled } from "@mui/material";
-import myProjects from "@/constants/myProjects";
+import myProjects, { IProject } from "@/constants/myProjects";
 import { motion } from "framer-motion";
 import { useRouter } from "next/router";
 import useTranslation from "@/hooks/useTranslation";
@@ -12,7 +12,7 @@ const IframeStyles = styled("iframe")`
   border: none;
 `;
 interface Props {
-  project: any;
+  project: IProject;
 }
 
 export default function Home({ project }: Props) {
@@ -30,7 +30,6 @@ export default function Home({ project }: Props) {
     link_github,
     dependencies,
     isMarkdown,
-    markdown,
   } = project;
 
   return (
@@ -183,7 +182,19 @@ export default function Home({ project }: Props) {
               )}
             </>
           )}
-          {isMarkdown && <ReactMarkdown>{t(description)}</ReactMarkdown>}
+          {isMarkdown && (
+            <motion.div
+              initial={{
+                marginBottom: 2,
+                position: "relative",
+                left: "-100vw",
+                minWidth: "280px",
+              }}
+              animate={{ left: 0, transition: { delay: 1 } }}
+            >
+              <ReactMarkdown>{t(description[0])}</ReactMarkdown>
+            </motion.div>
+          )}
         </Grid>
       </Grid>
       {codesandboxLink && (

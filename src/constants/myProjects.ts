@@ -7,8 +7,26 @@ import thoughts from "@/assets/images/projects/thoughts.png";
 import defaultImg from "@/assets/images/projects/default.png";
 import wallet from "@/assets/images/projects/wallet.png";
 import rickAndMorty from "@/assets/images/projects/rickAndMorty.png";
+import { StaticImageData } from "next/image";
 
-const myProjects = [
+interface IDependencies {
+  environment: string;
+  tools: string[];
+}
+export interface IProject {
+  name: string;
+  slug: string;
+  link: string;
+  environment: string;
+  img: StaticImageData;
+  link_external?: string;
+  link_github?: string;
+  description: string[];
+  dependencies: IDependencies[];
+  isMarkdown?: boolean;
+  codesandboxLink?: string;
+}
+const myProjects: IProject[] = [
   {
     name: "Wallet",
     slug: "wallet",
@@ -73,7 +91,7 @@ const myProjects = [
     img: rickAndMorty,
     link_external: "https://rick-and-morty-memory-game-v2.vercel.app/",
     link_github: "https://github.com/ilemarandrade/rick-and-morty-memory-game",
-    description: "projects.memory_game",
+    description: ["projects.memory_game"],
     isMarkdown: true,
     dependencies: [
       {
@@ -187,11 +205,6 @@ const myProjects = [
       },
     ],
   },
-  /*{
-        name: "Memory Game",
-        link: "/works/nameOfprojectIs",
-        img:
- pelis    },*/
   {
     name: "Calculator",
     slug: "calculator",
