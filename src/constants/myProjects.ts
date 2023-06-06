@@ -4,10 +4,11 @@ import calculator from "@/assets/images/projects/calculator.png";
 import landingPage from "@/assets/images/projects/landingPage.png";
 import markdown from "@/assets/images/projects/markdown.png";
 import thoughts from "@/assets/images/projects/thoughts.png";
-import defaultImg from "@/assets/images/projects/default.png";
+import catalogComponents from "@/assets/images/projects/catalogComponents.png";
 import wallet from "@/assets/images/projects/wallet.png";
 import rickAndMorty from "@/assets/images/projects/rickAndMorty.png";
 import { StaticImageData } from "next/image";
+import pomodoro from "@/assets/images/projects/pomodoro.png";
 
 interface IDependencies {
   environment: string;
@@ -25,6 +26,7 @@ export interface IProject {
   dependencies: IDependencies[];
   isMarkdown?: boolean;
   codesandboxLink?: string;
+  isItAdesktopImage?: boolean;
 }
 const myProjects: IProject[] = [
   {
@@ -79,6 +81,48 @@ const myProjects: IProject[] = [
           "moment",
           "mongoose",
           "mongodb",
+        ],
+      },
+    ],
+  },
+  {
+    name: "Component Catalog",
+    slug: "component-catalog",
+    link: "/works/component-catalog",
+    environment: "REACT APP WEB",
+    img: catalogComponents,
+    isItAdesktopImage: true,
+    link_external: "https://components-catalog.vercel.app/",
+    link_github: "https://github.com/ilemarandrade/catalog-components",
+    description: [""],
+    dependencies: [
+      {
+        environment: "Frontend",
+        tools: [
+          "axios",
+          "react",
+          "react-dom",
+          "react-router-dom",
+          "react-scripts",
+          "typescript",
+          "@emotion/react",
+          "@emotion/styled",
+          "@mui/icons-material",
+          "@mui/material",
+          "@mui/x-date-pickers",
+          "@testing-library/jest-dom",
+          "@testing-library/react",
+          "@testing-library/user-event",
+          "@types/jest",
+          "@types/node",
+          "@types/react",
+          "@types/react-dom",
+          "array-move",
+          "axios",
+          "dayjs",
+          "moment",
+          "react-sortable-hoc",
+          "recharts",
         ],
       },
     ],
@@ -161,7 +205,7 @@ const myProjects: IProject[] = [
     slug: "pomodoro-clock",
     link: "/works/pomodoro-clock",
     environment: "REACT APP WEB",
-    img: defaultImg,
+    img: pomodoro,
     description: ["projects.calculator.first_paragraph"],
     codesandboxLink:
       "https://codesandbox.io/embed/reloj-pomodoro-5tgjr?fontsize=14&hidenavigation=1&view=preview&theme=dark&view=preview&codemirror=1&hidedevtools=1",
