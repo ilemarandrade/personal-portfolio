@@ -44,9 +44,19 @@ const animation = {
           },
         },
         initial: {
-          transform: 'scale(1)',
+          transform: "scale(1)",
           top: "0%",
-        }
+        },
+      },
+      imgDesktop: {
+        variants: {
+          worksWithMobileExample: {
+            top: "-50%",
+          },
+        },
+        initial: {
+          top: "0%",
+        },
       },
       seeMore: {
         variants: {
@@ -57,7 +67,7 @@ const animation = {
         initial: {
           opacity: 0,
         },
-      }
+      },
     },
   },
 };
