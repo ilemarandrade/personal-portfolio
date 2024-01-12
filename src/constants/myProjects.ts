@@ -7,6 +7,7 @@ import thoughts from "@/assets/images/projects/thoughts.png";
 import catalogComponents from "@/assets/images/projects/catalogComponents.png";
 import wallet from "@/assets/images/projects/wallet.png";
 import rickAndMorty from "@/assets/images/projects/rickAndMorty.png";
+import university from "@/assets/images/projects/university.png";
 import { StaticImageData } from "next/image";
 import pomodoro from "@/assets/images/projects/pomodoro.png";
 
@@ -81,6 +82,25 @@ const myProjects: IProject[] = [
           "moment",
           "mongoose",
           "mongodb",
+        ],
+      },
+    ],
+  },
+  {
+    name: "University Landing",
+    slug: "university-landing",
+    link: "/works/university-landing",
+    environment: "WEB",
+    img: university,
+    isItAdesktopImage: true,
+    link_external: "https://landing-to-university-test.vercel.app/",
+    link_github: "https://github.com/ilemarandrade/Landing-to-university-test",
+    description: [""],
+    dependencies: [
+      {
+        environment: "Frontend",
+        tools: [
+          "html","css","js","jquery","bootstrap"
         ],
       },
     ],
