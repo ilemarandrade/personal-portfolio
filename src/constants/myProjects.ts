@@ -93,7 +93,7 @@ const myProjects: IProject[] = [
     environment: "WEB",
     img: university,
     isItAdesktopImage: true,
-    link_external: "https://landing-to-university-test.vercel.app/",
+    link_external: "https://landing-to-university.vercel.app/",
     link_github: "https://github.com/ilemarandrade/Landing-to-university-test",
     description: [""],
     dependencies: [
