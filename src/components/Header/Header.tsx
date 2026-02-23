@@ -20,7 +20,7 @@ const Header = () => {
   const { t } = useTranslation();
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const isMobile = useMediaQuery((theme: Theme) =>
-    theme.breakpoints.down("md")
+    theme.breakpoints.down("md"),
   );
   return (
     <>
@@ -32,8 +32,7 @@ const Header = () => {
         animate={{ opacity: 1, transition: { delay: 1.2 } }}
       >
         <Grid item alignItems="center" sx={{ display: "flex" }}>
-          <MyName href="/">Ilemar Andrade</MyName>
-          {!isMobile && <Avatar alt="Ilemar Andrade" src={ile} />}
+          <MyName href="/">{!isMobile ? "Ilemar Andrade" : "Ilemar A."}</MyName>
         </Grid>
         <Grid
           item
