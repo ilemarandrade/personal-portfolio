@@ -19,7 +19,7 @@ const Language = () => {
   return (
     <ButtonStyles>
       <Link href={asPath} locale={changeTo}>
-        <FlagStyles src={!isEnglish ? usa : spain} alt="flag" />
+        <FlagStyles src={isEnglish ? usa : spain} alt="flag" />
       </Link>
     </ButtonStyles>
   );
