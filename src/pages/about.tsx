@@ -32,18 +32,6 @@ export default function About() {
         <Grid
           container
           sx={{
-            mb: 4,
-            background: "radial-gradient(#ff6900 -20%,transparent 90%)",
-            borderRadius: "24px",
-            border: "1px solid #262626",
-          }}
-          justifyContent="center"
-        >
-          <Me />
-        </Grid>
-        <Grid
-          container
-          sx={{
             mb: 6,
           }}
         >
