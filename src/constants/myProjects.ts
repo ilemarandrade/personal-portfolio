@@ -10,6 +10,7 @@ import rickAndMorty from "@/assets/images/projects/rickAndMorty.png";
 import university from "@/assets/images/projects/university.png";
 import { StaticImageData } from "next/image";
 import pomodoro from "@/assets/images/projects/pomodoro.png";
+import woow from "@/assets/images/projects/default.png";
 
 interface IDependencies {
   environment: string;
@@ -108,9 +109,7 @@ const myProjects: IProject[] = [
     dependencies: [
       {
         environment: "Frontend",
-        tools: [
-          "html","css","js","jquery","bootstrap"
-        ],
+        tools: ["html", "css", "js", "jquery", "bootstrap"],
       },
     ],
   },
@@ -207,12 +206,69 @@ const myProjects: IProject[] = [
     ],
   },
   {
+    name: "Woow Technology",
+    slug: "woow-technology",
+    link: "/works/woow-technology",
+    environment: "FULL STACK WEB",
+    img: woow,
+    category: ProjectCategory.technical_test,
+    link_github: "https://github.com/ilemarandrade/woow-test",
+    description: [
+      "projects.woow_technology.first_paragraph",
+      "projects.woow_technology.second_paragraph",
+    ],
+    dependencies: [
+      {
+        environment: "Frontend",
+        tools: [
+          "react",
+          "react-dom",
+          "react-router-dom",
+          "react-hook-form",
+          "@hookform/resolvers",
+          "@tanstack/react-query",
+          "axios",
+          "i18next",
+          "react-i18next",
+          "react-hot-toast",
+          "joi",
+          "typescript",
+          "tailwindcss",
+          "vite",
+          "vitest",
+          "@testing-library/react",
+        ],
+      },
+      {
+        environment: "Backend",
+        tools: [
+          "express",
+          "typescript",
+          "prisma",
+          "@prisma/client",
+          "pg",
+          "jsonwebtoken",
+          "bcrypt",
+          "cors",
+          "dotenv",
+          "express-validator",
+          "jest",
+          "supertest",
+        ],
+      },
+      {
+        environment: "Infra",
+        tools: ["docker", "docker-compose", "postgresql"],
+      },
+    ],
+  },
+  {
     name: "Movie Search",
     slug: "movie-search",
     link: "/works/movie-search",
     environment: "REACT APP WEB",
     img: pelis,
-    category: ProjectCategory.personal,
+    category: ProjectCategory.certification,
     codesandboxLink:
       "https://codesandbox.io/embed/busqueda-de-peliculas-fzzh2?fontsize=14&hidenavigation=1&view=preview&theme=dark&view=preview&codemirror=1&hidedevtools=1",
     description: [
@@ -340,7 +396,7 @@ const myProjects: IProject[] = [
     link: "/works/landing-page",
     environment: "REACT APP WEB",
     img: landingPage,
-    category: ProjectCategory.personal,
+    category: ProjectCategory.certification,
     codesandboxLink:
       "https://codesandbox.io/embed/landing-page-edi-react-bq2hq?fontsize=14&hidenavigation=1&view=preview&theme=dark&view=preview&codemirror=1&hidedevtools=1",
     dependencies: [

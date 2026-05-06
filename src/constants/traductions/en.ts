@@ -50,6 +50,12 @@ const en = {
       first_paragraph:
         'This project is part of the projects to obtain my certificate in "Front End Development Libraries".',
     },
+    woow_technology: {
+      first_paragraph:
+        "Full stack application developed as a technical test for Woow Technology. Includes a REST API with JWT authentication, user management, and a web client with protected routes and roles (USER/ADMIN).",
+      second_paragraph:
+        "Built as a monorepo with a Node.js + Express + Prisma + PostgreSQL backend and a React 18 + Vite + TypeScript + Tailwind CSS frontend, containerized with Docker. The API exposes versioned endpoints for registration, login, profile management and user listing (ADMIN only).",
+    },
     landing_page:
       "This project was for the purpose of practicing the layout of a website.",
     memory_game: `
