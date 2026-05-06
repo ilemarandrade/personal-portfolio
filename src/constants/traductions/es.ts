@@ -50,6 +50,12 @@ const es = {
       first_paragraph:
         'Este proyecto es parte de los proyectos para obtener mi certificado en "Front End Development Libraries".',
     },
+    puntospoint: {
+      first_paragraph:
+        "Prueba técnica frontend para PuntosPoint desarrollada con Next.js 13 (App Router), MUI, Tailwind CSS y React Query. Incluye un dashboard con filtros rastreados mediante eventos de Google Analytics y un catálogo de componentes publicado con Storybook.",
+      second_paragraph:
+        "Cuenta con tests unitarios con Jest y React Testing Library, tests end-to-end con Cypress y un pipeline CI/CD con GitHub Actions para verificaciones automáticas de calidad en cada push.",
+    },
     woow_technology: {
       first_paragraph:
         "Aplicación full stack desarrollada como prueba técnica para Woow Technology. Incluye API REST con autenticación JWT, gestión de usuarios y cliente web con rutas protegidas y roles (USER/ADMIN).",

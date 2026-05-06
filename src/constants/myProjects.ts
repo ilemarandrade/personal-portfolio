@@ -11,6 +11,7 @@ import university from "@/assets/images/projects/university.png";
 import { StaticImageData } from "next/image";
 import pomodoro from "@/assets/images/projects/pomodoro.png";
 import woow from "@/assets/images/projects/default.png";
+import puntospoint from "@/assets/images/projects/default.png";
 
 interface IDependencies {
   environment: string;
@@ -202,6 +203,57 @@ const myProjects: IProject[] = [
           "cypress",
           "msw",
         ],
+      },
+    ],
+  },
+  {
+    name: "PuntosPoint",
+    slug: "puntospoint-test-frontend",
+    link: "/works/puntospoint-test-frontend",
+    environment: "NEXT JS WEB",
+    img: puntospoint,
+    category: ProjectCategory.technical_test,
+    link_external: "https://puntospoint-test-frontend.vercel.app/dashboard",
+    link_github: "https://github.com/ilemarandrade/puntospoint-test-frontend",
+    isItAdesktopImage: true,
+    description: [
+      "projects.puntospoint.first_paragraph",
+      "projects.puntospoint.second_paragraph",
+    ],
+    dependencies: [
+      {
+        environment: "Frontend",
+        tools: [
+          "next",
+          "react",
+          "react-dom",
+          "@mui/material",
+          "@mui/icons-material",
+          "@emotion/react",
+          "@emotion/styled",
+          "@tanstack/react-query",
+          "axios",
+          "tailwindcss",
+          "recharts",
+          "date-fns",
+          "clsx",
+          "react-ga4",
+          "query-string",
+          "typescript",
+        ],
+      },
+      {
+        environment: "Testing",
+        tools: [
+          "jest",
+          "@testing-library/react",
+          "cypress",
+          "storybook",
+        ],
+      },
+      {
+        environment: "CI/CD",
+        tools: ["github-actions"],
       },
     ],
   },
