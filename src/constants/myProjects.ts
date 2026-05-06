@@ -212,7 +212,7 @@ const myProjects: IProject[] = [
     environment: "FULL STACK WEB",
     img: woow,
     category: ProjectCategory.technical_test,
-    link_github: "https://github.com/ilemarandrade/woow-test",
+    link_github: "https://github.com/ilemarandrade/wook-test-full-stack",
     description: [
       "projects.woow_technology.first_paragraph",
       "projects.woow_technology.second_paragraph",
