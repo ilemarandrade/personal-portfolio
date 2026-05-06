@@ -15,12 +15,19 @@ interface IDependencies {
   environment: string;
   tools: string[];
 }
+export enum ProjectCategory {
+  production = "production",
+  personal = "personal",
+  certification = "certification",
+  technical_test = "technical_test",
+}
 export interface IProject {
   name: string;
   slug: string;
   link: string;
   environment: string;
   img: StaticImageData;
+  category: ProjectCategory;
   link_external?: string;
   link_github?: string;
   description: string[];
@@ -36,6 +43,7 @@ const myProjects: IProject[] = [
     link: "/works/wallet",
     environment: "MERN APP WEB",
     img: wallet,
+    category: ProjectCategory.personal,
     link_external: "https://wallet-andrade.vercel.app/",
     link_github: "https://github.com/ilemarandrade/wallet",
     description: [
@@ -92,6 +100,7 @@ const myProjects: IProject[] = [
     link: "/works/university-landing",
     environment: "WEB",
     img: university,
+    category: ProjectCategory.technical_test,
     isItAdesktopImage: true,
     link_external: "https://landing-to-university-test.vercel.app/",
     link_github: "https://github.com/ilemarandrade/Landing-to-university-test",
@@ -111,6 +120,7 @@ const myProjects: IProject[] = [
     link: "/works/component-catalog",
     environment: "REACT APP WEB",
     img: catalogComponents,
+    category: ProjectCategory.technical_test,
     isItAdesktopImage: true,
     link_external: "https://components-catalog.vercel.app/",
     link_github: "https://github.com/ilemarandrade/catalog-components",
@@ -153,6 +163,7 @@ const myProjects: IProject[] = [
     link: "/works/rick-&-morty-memory-game",
     environment: "REACT APP WEB",
     img: rickAndMorty,
+    category: ProjectCategory.technical_test,
     link_external: "https://rick-and-morty-memory-game-v2.vercel.app/",
     link_github: "https://github.com/ilemarandrade/rick-and-morty-memory-game",
     description: ["projects.memory_game"],
@@ -201,6 +212,7 @@ const myProjects: IProject[] = [
     link: "/works/movie-search",
     environment: "REACT APP WEB",
     img: pelis,
+    category: ProjectCategory.personal,
     codesandboxLink:
       "https://codesandbox.io/embed/busqueda-de-peliculas-fzzh2?fontsize=14&hidenavigation=1&view=preview&theme=dark&view=preview&codemirror=1&hidedevtools=1",
     description: [
@@ -226,6 +238,7 @@ const myProjects: IProject[] = [
     link: "/works/pomodoro-clock",
     environment: "REACT APP WEB",
     img: pomodoro,
+    category: ProjectCategory.certification,
     description: ["projects.calculator.first_paragraph"],
     codesandboxLink:
       "https://codesandbox.io/embed/reloj-pomodoro-5tgjr?fontsize=14&hidenavigation=1&view=preview&theme=dark&view=preview&codemirror=1&hidedevtools=1",
@@ -249,6 +262,7 @@ const myProjects: IProject[] = [
     link: "/works/drum-machine",
     environment: "REACT APP WEB",
     img: drum,
+    category: ProjectCategory.certification,
     codesandboxLink:
       "https://codesandbox.io/embed/drum-pad-q8dds?fontsize=14&hidenavigation=1&view=preview&theme=dark&view=preview&codemirror=1&hidedevtools=1",
     description: [
@@ -275,6 +289,7 @@ const myProjects: IProject[] = [
     link: "/works/calculator",
     environment: "REACT APP WEB",
     img: calculator,
+    category: ProjectCategory.certification,
     codesandboxLink:
       "https://codesandbox.io/embed/calculadora-5kl0f?fontsize=14&hidenavigation=1&view=preview&theme=dark&view=preview&codemirror=1&hidedevtools=1",
     description: ["projects.calculator.first_paragraph"],
@@ -291,6 +306,7 @@ const myProjects: IProject[] = [
     link: "/works/new-quote",
     environment: "Jquery WEB",
     img: thoughts,
+    category: ProjectCategory.certification,
     codesandboxLink:
       "https://codesandbox.io/embed/mensajes-con-autores-evet4?fontsize=14&hidenavigation=1&view=preview&theme=dark&view=preview&codemirror=1&hidedevtools=1",
     description: ["projects.calculator.first_paragraph"],
@@ -307,6 +323,7 @@ const myProjects: IProject[] = [
     link: "/works/mark-down",
     environment: "REACT APP WEB",
     img: markdown,
+    category: ProjectCategory.certification,
     codesandboxLink:
       "https://codesandbox.io/embed/markedjs-51q3x?fontsize=14&hidenavigation=1&view=preview&theme=dark&view=preview&codemirror=1&hidedevtools=1",
     dependencies: [
@@ -323,6 +340,7 @@ const myProjects: IProject[] = [
     link: "/works/landing-page",
     environment: "REACT APP WEB",
     img: landingPage,
+    category: ProjectCategory.personal,
     codesandboxLink:
       "https://codesandbox.io/embed/landing-page-edi-react-bq2hq?fontsize=14&hidenavigation=1&view=preview&theme=dark&view=preview&codemirror=1&hidedevtools=1",
     dependencies: [

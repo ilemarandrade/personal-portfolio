@@ -150,6 +150,12 @@ Para lograr estabilidad en el funcionamiento de cada módulo de la app apliqué 
 Utilice vercel para el deploy.    
     `,
   },
+  categories: {
+    production: "Producción",
+    personal: "Personales",
+    certification: "Certificaciones",
+    technical_test: "Pruebas Técnicas",
+  },
   contact_me: "Contactame",
   about: "Conoceme",
   works: "Trabajos",

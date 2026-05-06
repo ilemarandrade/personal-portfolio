@@ -149,6 +149,12 @@ To achieve stability in the operation of each module of the app I applied three 
 
 Use vercel for deploy.`,
   },
+  categories: {
+    production: "Production",
+    personal: "Personal",
+    certification: "Certifications",
+    technical_test: "Technical Test",
+  },
   contact_me: "Get it touch",
   about: "About",
   works: "Works",
