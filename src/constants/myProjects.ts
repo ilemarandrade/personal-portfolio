@@ -11,7 +11,7 @@ import university from "@/assets/images/projects/university.png";
 import { StaticImageData } from "next/image";
 import pomodoro from "@/assets/images/projects/pomodoro.png";
 import woow from "@/assets/images/projects/default.png";
-import puntospoint from "@/assets/images/projects/default.png";
+import puntospoint from "@/assets/images/projects/puntospoint-test.jpg";
 
 interface IDependencies {
   environment: string;
