@@ -1,6 +1,5 @@
 import menuItems from "@/constants/menuItems";
 import { Grid, Theme, useMediaQuery } from "@mui/material";
-import ile from "@/assets/images/ile.jpeg";
 import { useState } from "react";
 import MenuButton from "./MenuButton";
 import {
@@ -64,7 +63,6 @@ const Header = () => {
         </Grid>
       </NavStyles>
       <Menu container direction="column" isOpen={isMenuOpen}>
-        <Avatar alt="Ilemar Andrade" src={ile} />
         {menuItems.map(({ label, to }) => (
           <MenuItemsStyles href={to} key={label}>
             {t(label)}
