@@ -54,10 +54,9 @@ const en = {
       first_paragraph: `**Co-created by Ilemar Andrade & Chellys Castillo**
 
 Eventezer is a multi-tenant SaaS platform for event management, serving both individuals (weddings, concerts, workshops) and organizations (companies, agencies, associations) on a subscription + commission model — Eventezer only charges a commission on approved orders.
-
 We designed and built the REST API from the ground up as a modular NestJS monolith, following a strict layered architecture (Controller → Service → Prisma) with full multi-tenant isolation. All responses are automatically wrapped in a consistent \`{ statusCode, message, data }\` envelope via a global interceptor, and all input is validated by a global ValidationPipe using class-validator.
 
-**What we built:**
+**What I built:**
 - **Auth & authorization** — JWT with access/refresh token rotation, bcrypt password hashing, OTP staff login flow, role-based guards (OWNER, ADMIN, custom permissions), and a PermissionsGuard that checks per-staff permission rows in the database
 - **Multi-tenant event management** — full CRUD for events, ticket types (including donation-based admission), pricing, capacity, and visibility; scheduled jobs for event lifecycle automation
 - **Order & payment flow** — time-limited reservations via BullMQ, commission calculation per approved order, and per-tenant payment method configuration
@@ -68,8 +67,7 @@ We designed and built the REST API from the ground up as a modular NestJS monoli
 - **Exchange rate** — BCV scraper with Redis-backed cache for multi-currency support
 - **File storage** — S3-compatible image and asset storage with Sharp-based processing
 - **Waitlist** — pre-sale interest capture and waitlist management per event
-
-**Stack:** NestJS v11 · TypeScript · PostgreSQL · Prisma v7 · BullMQ + Redis · Socket.io · Resend · AWS S3 + Sharp · Cloudflare Stream · passport-jwt · class-validator · Swagger`,
+`,
     },
     eventezer_admin: {
       first_paragraph: `**Co-created by Ilemar Andrade & Chellys Castillo**

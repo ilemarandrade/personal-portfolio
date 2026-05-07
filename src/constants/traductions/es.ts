@@ -57,7 +57,7 @@ Eventezer es una plataforma SaaS multi-tenant para la gestión de eventos, orien
 
 Diseñamos y construimos la API REST desde cero como un monolito NestJS modular, con arquitectura en capas estricta (Controller → Service → Prisma) y aislamiento multi-tenant completo. Todas las respuestas se envuelven automáticamente en un envelope \`{ statusCode, message, data }\` mediante un interceptor global, y toda entrada es validada por un ValidationPipe global con class-validator.
 
-**Qué construimos:**
+**Qué desarrolle:**
 - **Autenticación y autorización** — JWT con rotación de access/refresh token, bcrypt, flujo de login OTP para staff, guards por roles (OWNER, ADMIN, permisos personalizados) y un PermissionsGuard que verifica filas de permisos por staff en la base de datos
 - **Gestión de eventos multi-tenant** — CRUD completo de eventos, tipos de entrada (incluyendo admisión por donación), precios, capacidad y visibilidad; jobs programados para el ciclo de vida de los eventos
 - **Flujo de órdenes y pagos** — reservas temporales con expiración via BullMQ, cálculo de comisiones por orden aprobada, configuración de métodos de pago por tenant
@@ -68,8 +68,7 @@ Diseñamos y construimos la API REST desde cero como un monolito NestJS modular,
 - **Tipo de cambio** — scraper del BCV con caché en Redis para soporte multi-divisa
 - **Almacenamiento de archivos** — almacenamiento S3-compatible con procesamiento via Sharp
 - **Lista de espera** — captura de interés preventa y gestión de lista de espera por evento
-
-**Stack:** NestJS v11 · TypeScript · PostgreSQL · Prisma v7 · BullMQ + Redis · Socket.io · Resend · AWS S3 + Sharp · Cloudflare Stream · passport-jwt · class-validator · Swagger`,
+`,
     },
     eventezer_admin: {
       first_paragraph: `**Co-creada por Ilemar Andrade & Chellys Castillo**
