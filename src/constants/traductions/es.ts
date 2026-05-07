@@ -2,7 +2,7 @@ const es = {
   main_titles: {
     software_developer: "Desarrollador de Software",
     about_me: "Acerca de mí",
-    all_personal_works: "Todos Mis Trabajos Personales",
+    all_personal_works: "Mis Trabajos",
   },
   about_me: {
     first_paragraph:

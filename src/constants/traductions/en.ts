@@ -2,7 +2,7 @@ const en = {
   main_titles: {
     software_developer: "Software Developer",
     about_me: "About me",
-    all_personal_works: "All Personal Works",
+    all_personal_works: "All Works",
   },
   about_me: {
     first_paragraph:
