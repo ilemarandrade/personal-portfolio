@@ -40,19 +40,19 @@ const animation = {
         variants: {
           worksWithMobileExample: {
             scale: 0.9,
-            y: -70,
+            y: -120,
           },
         },
         initial: {
           scale: 1,
-          y: 0,
+          y: 12,
         },
       },
       imgTablet: {
         variants: {
           worksWithMobileExample: {
             scale: 0.9,
-            y: -100,
+            y: -120,
           },
         },
         initial: {
