@@ -36,6 +36,10 @@ const myProjects: IProject[] = [
     link: "/works/eventezer-admin",
     environment: "NEXT JS WEB",
     category: ProjectCategory.production,
+    previews: {
+      mobile: "/images/projects/eventezer-admin/mobile.png",
+      tablet: "/images/projects/eventezer-admin/desktop.png",
+    },
     description: ["projects.eventezer_admin.first_paragraph"],
     isMarkdown: true,
     dependencies: [
