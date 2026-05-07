@@ -1,18 +1,4 @@
-import pelis from "@/assets/images/projects/pelis.png";
-import drum from "@/assets/images/projects/drum.png";
-import calculator from "@/assets/images/projects/calculator.png";
-import landingPage from "@/assets/images/projects/landingPage.png";
-import markdown from "@/assets/images/projects/markdown.png";
-import thoughts from "@/assets/images/projects/thoughts.png";
-import catalogComponents from "@/assets/images/projects/catalogComponents.png";
-import wallet from "@/assets/images/projects/wallet.png";
-import rickAndMorty from "@/assets/images/projects/rickAndMorty.png";
-import university from "@/assets/images/projects/university.png";
-import { StaticImageData } from "next/image";
 import { DeviceFrameVariant } from "@/components/DeviceFrame";
-import pomodoro from "@/assets/images/projects/pomodoro.png";
-import woow from "@/assets/images/projects/default.png";
-import puntospoint from "@/assets/images/projects/puntospoint-test.jpg";
 
 interface IDependencies {
   environment: string;
@@ -24,18 +10,22 @@ export enum ProjectCategory {
   certification = "certification",
   technical_test = "technical_test",
 }
+export interface IProjectFullPage {
+  mobile?: string;
+  desktop?: string;
+}
 export interface IProject {
   name: string;
   slug: string;
   link: string;
   environment: string;
-  img?: StaticImageData;
   category: ProjectCategory;
+  previews?: Partial<Record<DeviceFrameVariant, string>>;
+  fullPage?: IProjectFullPage;
   link_external?: string;
   link_github?: string;
   description: string[];
   dependencies: IDependencies[];
-  frameVariant?: DeviceFrameVariant;
   isMarkdown?: boolean;
   codesandboxLink?: string;
 }
@@ -45,9 +35,8 @@ const myProjects: IProject[] = [
     slug: "wallet",
     link: "/works/wallet",
     environment: "MERN APP WEB",
-    img: wallet,
     category: ProjectCategory.personal,
-    frameVariant: "mobile",
+    previews: { mobile: "/images/projects/wallet/mobile.png" },
     link_external: "https://wallet-andrade.vercel.app/",
     link_github: "https://github.com/ilemarandrade/wallet",
     description: [
@@ -103,11 +92,16 @@ const myProjects: IProject[] = [
     slug: "university-landing",
     link: "/works/university-landing",
     environment: "WEB",
-    img: university,
     category: ProjectCategory.technical_test,
-    frameVariant: "tablet",
-
-    link_external: "https://landing-to-university-test.vercel.app/",
+    previews: {
+      tablet: "/images/projects/landing-to-university/desktop.png",
+      mobile: "/images/projects/landing-to-university/mobile.png",
+    },
+    fullPage: {
+      mobile: "/images/projects/landing-to-university/full-page-mobile.png",
+      desktop: "/images/projects/landing-to-university/full-page-desktop.png",
+    },
+    link_external: "https://landing-to-university.vercel.app/",
     link_github: "https://github.com/ilemarandrade/Landing-to-university-test",
     description: [""],
     dependencies: [
@@ -122,10 +116,11 @@ const myProjects: IProject[] = [
     slug: "component-catalog",
     link: "/works/component-catalog",
     environment: "REACT APP WEB",
-    img: catalogComponents,
     category: ProjectCategory.technical_test,
-    frameVariant: "tablet",
-
+    previews: {
+      tablet: "/images/projects/components-catalog/desktop.png",
+      mobile: "/images/projects/components-catalog/mobile.png",
+    },
     link_external: "https://components-catalog.vercel.app/",
     link_github: "https://github.com/ilemarandrade/catalog-components",
     description: [""],
@@ -166,9 +161,11 @@ const myProjects: IProject[] = [
     slug: "rick-&-morty-memory-game",
     link: "/works/rick-&-morty-memory-game",
     environment: "REACT APP WEB",
-    img: rickAndMorty,
     category: ProjectCategory.technical_test,
-    frameVariant: "mobile",
+    previews: {
+      tablet: "/images/projects/rick-and-morty/desktop.png",
+      mobile: "/images/projects/rick-and-morty/mobile.png",
+    },
     link_external: "https://rick-and-morty-memory-game-v2.vercel.app/",
     link_github: "https://github.com/ilemarandrade/rick-and-morty-memory-game",
     description: ["projects.memory_game"],
@@ -216,12 +213,17 @@ const myProjects: IProject[] = [
     slug: "puntospoint-test-frontend",
     link: "/works/puntospoint-test-frontend",
     environment: "NEXT JS WEB",
-    img: puntospoint,
     category: ProjectCategory.technical_test,
-    frameVariant: "tablet",
+    previews: {
+      tablet: "/images/projects/puntospoint-test/desktop.png",
+      mobile: "/images/projects/puntospoint-test/mobile.png",
+    },
+    // fullPage: {
+    //   desktop: "/images/projects/puntospoint-test/full-page-desktop.png",
+    //   mobile: "/images/projects/puntospoint-test/full-page-mobile.png",
+    // },
     link_external: "https://puntospoint-test-frontend.vercel.app/dashboard",
     link_github: "https://github.com/ilemarandrade/puntospoint-test-frontend",
-
     description: [
       "projects.puntospoint.first_paragraph",
       "projects.puntospoint.second_paragraph",
@@ -263,10 +265,7 @@ const myProjects: IProject[] = [
     slug: "woow-technology",
     link: "/works/woow-technology",
     environment: "FULL STACK WEB",
-    img: woow,
     category: ProjectCategory.technical_test,
-    frameVariant: "tablet",
-
     link_github: "https://github.com/ilemarandrade/wook-test-full-stack",
     description: [
       "projects.woow_technology.first_paragraph",
@@ -322,9 +321,8 @@ const myProjects: IProject[] = [
     slug: "movie-search",
     link: "/works/movie-search",
     environment: "REACT APP WEB",
-    img: pelis,
     category: ProjectCategory.certification,
-    frameVariant: "mobile",
+    // previews: { mobile: "/images/projects/pelis.png" },
     codesandboxLink:
       "https://codesandbox.io/embed/busqueda-de-peliculas-fzzh2?fontsize=14&hidenavigation=1&view=preview&theme=dark&view=preview&codemirror=1&hidedevtools=1",
     description: [
@@ -349,9 +347,8 @@ const myProjects: IProject[] = [
     slug: "pomodoro-clock",
     link: "/works/pomodoro-clock",
     environment: "REACT APP WEB",
-    img: pomodoro,
     category: ProjectCategory.certification,
-    frameVariant: "mobile",
+    // previews: { mobile: "/images/projects/pomodoro.png" },
     description: ["projects.calculator.first_paragraph"],
     codesandboxLink:
       "https://codesandbox.io/embed/reloj-pomodoro-5tgjr?fontsize=14&hidenavigation=1&view=preview&theme=dark&view=preview&codemirror=1&hidedevtools=1",
@@ -374,9 +371,8 @@ const myProjects: IProject[] = [
     slug: "drum-machine",
     link: "/works/drum-machine",
     environment: "REACT APP WEB",
-    img: drum,
     category: ProjectCategory.certification,
-    frameVariant: "mobile",
+    // previews: { mobile: "/images/projects/drum.png" },
     codesandboxLink:
       "https://codesandbox.io/embed/drum-pad-q8dds?fontsize=14&hidenavigation=1&view=preview&theme=dark&view=preview&codemirror=1&hidedevtools=1",
     description: [
@@ -402,9 +398,8 @@ const myProjects: IProject[] = [
     slug: "calculator",
     link: "/works/calculator",
     environment: "REACT APP WEB",
-    img: calculator,
     category: ProjectCategory.certification,
-    frameVariant: "mobile",
+    // previews: { mobile: "/images/projects/calculator.png" },
     codesandboxLink:
       "https://codesandbox.io/embed/calculadora-5kl0f?fontsize=14&hidenavigation=1&view=preview&theme=dark&view=preview&codemirror=1&hidedevtools=1",
     description: ["projects.calculator.first_paragraph"],
@@ -420,9 +415,8 @@ const myProjects: IProject[] = [
     slug: "new-quote",
     link: "/works/new-quote",
     environment: "Jquery WEB",
-    img: thoughts,
     category: ProjectCategory.certification,
-    frameVariant: "mobile",
+    // previews: { mobile: "/images/projects/thoughts.png" },
     codesandboxLink:
       "https://codesandbox.io/embed/mensajes-con-autores-evet4?fontsize=14&hidenavigation=1&view=preview&theme=dark&view=preview&codemirror=1&hidedevtools=1",
     description: ["projects.calculator.first_paragraph"],
@@ -438,9 +432,8 @@ const myProjects: IProject[] = [
     slug: "mark-down",
     link: "/works/mark-down",
     environment: "REACT APP WEB",
-    img: markdown,
     category: ProjectCategory.certification,
-    frameVariant: "mobile",
+    // previews: { mobile: "/images/projects/markdown.png" },
     codesandboxLink:
       "https://codesandbox.io/embed/markedjs-51q3x?fontsize=14&hidenavigation=1&view=preview&theme=dark&view=preview&codemirror=1&hidedevtools=1",
     dependencies: [
@@ -456,9 +449,8 @@ const myProjects: IProject[] = [
     slug: "landing-page",
     link: "/works/landing-page",
     environment: "REACT APP WEB",
-    img: landingPage,
     category: ProjectCategory.certification,
-    frameVariant: "tablet",
+    // previews: { tablet: "/images/projects/landingPage.png" },
     codesandboxLink:
       "https://codesandbox.io/embed/landing-page-edi-react-bq2hq?fontsize=14&hidenavigation=1&view=preview&theme=dark&view=preview&codemirror=1&hidedevtools=1",
     dependencies: [
