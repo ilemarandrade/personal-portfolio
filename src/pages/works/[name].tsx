@@ -390,6 +390,12 @@ export default function ProjectDetail({ project }: Props) {
             </Typography>
           )}
 
+          {isMarkdown && (
+            <motion.div initial={{ ...animateFromLeft }} animate={animateProps}>
+              <ReactMarkdown>{t(description[0])}</ReactMarkdown>
+            </motion.div>
+          )}
+
           {dependencies?.length && (
             <>
               <Typography
@@ -424,12 +430,6 @@ export default function ProjectDetail({ project }: Props) {
                 ),
               )}
             </>
-          )}
-
-          {isMarkdown && (
-            <motion.div initial={{ ...animateFromLeft }} animate={animateProps}>
-              <ReactMarkdown>{t(description[0])}</ReactMarkdown>
-            </motion.div>
           )}
         </Grid>
       </Grid>
