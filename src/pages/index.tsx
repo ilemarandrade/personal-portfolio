@@ -10,8 +10,14 @@ import Arrow from "@/assets/icons/Arrow";
 import BugReportIcon from "@mui/icons-material/BugReport";
 import LanIcon from "@mui/icons-material/Lan";
 import { lastProject } from "@/constants/myProjects";
-import Image from "next/image";
 import useTranslation from "@/hooks/useTranslation";
+
+const ScreenPlaceholder = styled("div")`
+  width: 100%;
+  min-height: 180px;
+  background: linear-gradient(135deg, #1e2124 0%, #2a2d31 100%);
+  border-radius: 4px;
+`;
 
 const LastBox = styled(BoxMain)(
   ({ theme }) => `
@@ -108,7 +114,7 @@ export default function Home() {
                 }
                 sx={{ mt: 2, position: "relative" }}
               >
-                <Image src={lastProject.img} alt={lastProject.name} />
+                <ScreenPlaceholder />
               </Grid>
             </Grid>
             <Typography

@@ -9,6 +9,7 @@ import wallet from "@/assets/images/projects/wallet.png";
 import rickAndMorty from "@/assets/images/projects/rickAndMorty.png";
 import university from "@/assets/images/projects/university.png";
 import { StaticImageData } from "next/image";
+import { DeviceFrameVariant } from "@/components/DeviceFrame";
 import pomodoro from "@/assets/images/projects/pomodoro.png";
 import woow from "@/assets/images/projects/default.png";
 import puntospoint from "@/assets/images/projects/puntospoint-test.jpg";
@@ -28,15 +29,15 @@ export interface IProject {
   slug: string;
   link: string;
   environment: string;
-  img: StaticImageData;
+  img?: StaticImageData;
   category: ProjectCategory;
   link_external?: string;
   link_github?: string;
   description: string[];
   dependencies: IDependencies[];
+  frameVariant?: DeviceFrameVariant;
   isMarkdown?: boolean;
   codesandboxLink?: string;
-  isItAdesktopImage?: boolean;
 }
 const myProjects: IProject[] = [
   {
@@ -46,6 +47,7 @@ const myProjects: IProject[] = [
     environment: "MERN APP WEB",
     img: wallet,
     category: ProjectCategory.personal,
+    frameVariant: "mobile",
     link_external: "https://wallet-andrade.vercel.app/",
     link_github: "https://github.com/ilemarandrade/wallet",
     description: [
@@ -103,7 +105,8 @@ const myProjects: IProject[] = [
     environment: "WEB",
     img: university,
     category: ProjectCategory.technical_test,
-    isItAdesktopImage: true,
+    frameVariant: "tablet",
+
     link_external: "https://landing-to-university-test.vercel.app/",
     link_github: "https://github.com/ilemarandrade/Landing-to-university-test",
     description: [""],
@@ -121,7 +124,8 @@ const myProjects: IProject[] = [
     environment: "REACT APP WEB",
     img: catalogComponents,
     category: ProjectCategory.technical_test,
-    isItAdesktopImage: true,
+    frameVariant: "tablet",
+
     link_external: "https://components-catalog.vercel.app/",
     link_github: "https://github.com/ilemarandrade/catalog-components",
     description: [""],
@@ -164,6 +168,7 @@ const myProjects: IProject[] = [
     environment: "REACT APP WEB",
     img: rickAndMorty,
     category: ProjectCategory.technical_test,
+    frameVariant: "mobile",
     link_external: "https://rick-and-morty-memory-game-v2.vercel.app/",
     link_github: "https://github.com/ilemarandrade/rick-and-morty-memory-game",
     description: ["projects.memory_game"],
@@ -213,9 +218,10 @@ const myProjects: IProject[] = [
     environment: "NEXT JS WEB",
     img: puntospoint,
     category: ProjectCategory.technical_test,
+    frameVariant: "tablet",
     link_external: "https://puntospoint-test-frontend.vercel.app/dashboard",
     link_github: "https://github.com/ilemarandrade/puntospoint-test-frontend",
-    isItAdesktopImage: true,
+
     description: [
       "projects.puntospoint.first_paragraph",
       "projects.puntospoint.second_paragraph",
@@ -244,12 +250,7 @@ const myProjects: IProject[] = [
       },
       {
         environment: "Testing",
-        tools: [
-          "jest",
-          "@testing-library/react",
-          "cypress",
-          "storybook",
-        ],
+        tools: ["jest", "@testing-library/react", "cypress", "storybook"],
       },
       {
         environment: "CI/CD",
@@ -264,6 +265,8 @@ const myProjects: IProject[] = [
     environment: "FULL STACK WEB",
     img: woow,
     category: ProjectCategory.technical_test,
+    frameVariant: "tablet",
+
     link_github: "https://github.com/ilemarandrade/wook-test-full-stack",
     description: [
       "projects.woow_technology.first_paragraph",
@@ -321,6 +324,7 @@ const myProjects: IProject[] = [
     environment: "REACT APP WEB",
     img: pelis,
     category: ProjectCategory.certification,
+    frameVariant: "mobile",
     codesandboxLink:
       "https://codesandbox.io/embed/busqueda-de-peliculas-fzzh2?fontsize=14&hidenavigation=1&view=preview&theme=dark&view=preview&codemirror=1&hidedevtools=1",
     description: [
@@ -347,6 +351,7 @@ const myProjects: IProject[] = [
     environment: "REACT APP WEB",
     img: pomodoro,
     category: ProjectCategory.certification,
+    frameVariant: "mobile",
     description: ["projects.calculator.first_paragraph"],
     codesandboxLink:
       "https://codesandbox.io/embed/reloj-pomodoro-5tgjr?fontsize=14&hidenavigation=1&view=preview&theme=dark&view=preview&codemirror=1&hidedevtools=1",
@@ -371,6 +376,7 @@ const myProjects: IProject[] = [
     environment: "REACT APP WEB",
     img: drum,
     category: ProjectCategory.certification,
+    frameVariant: "mobile",
     codesandboxLink:
       "https://codesandbox.io/embed/drum-pad-q8dds?fontsize=14&hidenavigation=1&view=preview&theme=dark&view=preview&codemirror=1&hidedevtools=1",
     description: [
@@ -398,6 +404,7 @@ const myProjects: IProject[] = [
     environment: "REACT APP WEB",
     img: calculator,
     category: ProjectCategory.certification,
+    frameVariant: "mobile",
     codesandboxLink:
       "https://codesandbox.io/embed/calculadora-5kl0f?fontsize=14&hidenavigation=1&view=preview&theme=dark&view=preview&codemirror=1&hidedevtools=1",
     description: ["projects.calculator.first_paragraph"],
@@ -415,6 +422,7 @@ const myProjects: IProject[] = [
     environment: "Jquery WEB",
     img: thoughts,
     category: ProjectCategory.certification,
+    frameVariant: "mobile",
     codesandboxLink:
       "https://codesandbox.io/embed/mensajes-con-autores-evet4?fontsize=14&hidenavigation=1&view=preview&theme=dark&view=preview&codemirror=1&hidedevtools=1",
     description: ["projects.calculator.first_paragraph"],
@@ -432,6 +440,7 @@ const myProjects: IProject[] = [
     environment: "REACT APP WEB",
     img: markdown,
     category: ProjectCategory.certification,
+    frameVariant: "mobile",
     codesandboxLink:
       "https://codesandbox.io/embed/markedjs-51q3x?fontsize=14&hidenavigation=1&view=preview&theme=dark&view=preview&codemirror=1&hidedevtools=1",
     dependencies: [
@@ -449,6 +458,7 @@ const myProjects: IProject[] = [
     environment: "REACT APP WEB",
     img: landingPage,
     category: ProjectCategory.certification,
+    frameVariant: "tablet",
     codesandboxLink:
       "https://codesandbox.io/embed/landing-page-edi-react-bq2hq?fontsize=14&hidenavigation=1&view=preview&theme=dark&view=preview&codemirror=1&hidedevtools=1",
     dependencies: [

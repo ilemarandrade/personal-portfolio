@@ -39,23 +39,25 @@ const animation = {
       img: {
         variants: {
           worksWithMobileExample: {
-            transform: "scale(0.5)",
-            top: "-85%",
+            scale: 0.9,
+            y: -70,
           },
         },
         initial: {
-          transform: "scale(1)",
-          top: "0%",
+          scale: 1,
+          y: 0,
         },
       },
-      imgDesktop: {
+      imgTablet: {
         variants: {
           worksWithMobileExample: {
-            top: "-50%",
+            scale: 0.9,
+            y: -100,
           },
         },
         initial: {
-          top: "0%",
+          scale: 1,
+          y: 12,
         },
       },
       seeMore: {

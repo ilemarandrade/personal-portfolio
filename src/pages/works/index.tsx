@@ -1,10 +1,10 @@
 import MainLayout from "@/layout/MainLayout";
 import BoxMain from "@/components/BoxMain";
+import React from "react";
 import { Grid, Theme, Typography, useMediaQuery, styled } from "@mui/material";
 import { motion } from "framer-motion";
 import animation from "@/constants/animation";
 import Arrow from "@/assets/icons/Arrow";
-import Image from "next/image";
 import myProjects, { IProject, ProjectCategory } from "@/constants/myProjects";
 import useTranslation from "@/hooks/useTranslation";
 import ScrollToTop from "@/components/ScrollToTop";
@@ -12,8 +12,8 @@ import ScrollToTop from "@/components/ScrollToTop";
 const CATEGORY_ORDER: ProjectCategory[] = [
   ProjectCategory.production,
   ProjectCategory.personal,
-  ProjectCategory.certification,
   ProjectCategory.technical_test,
+  ProjectCategory.certification,
 ];
 
 const CategoryNav = styled("nav")(
@@ -29,7 +29,7 @@ const CategoryNav = styled("nav")(
   ${theme.breakpoints.down("md")} {
     top: 81px;
   }
-`
+`,
 );
 
 const CategoryChip = styled("a")(
@@ -48,19 +48,19 @@ const CategoryChip = styled("a")(
     color: ${theme.palette.primary.main};
     border-color: ${theme.palette.primary.main};
   }
-`
+`,
 );
 
 function scrollToSection(id: string) {
-  document.getElementById(id)?.scrollIntoView({ behavior: "smooth", block: "start" });
+  document
+    .getElementById(id)
+    ?.scrollIntoView({ behavior: "smooth", block: "start" });
 }
 
 function ProjectCard({
   name,
-  img,
   environment,
   link,
-  isItAdesktopImage,
   isMobile,
 }: IProject & { isMobile: boolean }) {
   return (
@@ -82,28 +82,42 @@ function ProjectCard({
           <Grid
             item
             component={motion.div}
-            variants={animation.worksWithMobileExample.variants.textBox.variants}
+            variants={
+              animation.worksWithMobileExample.variants.textBox.variants
+            }
+            sx={{ minHeight: 80 }}
           >
             <Typography variant="body1">{environment}</Typography>
             <Typography variant="h4" fontWeight={600}>
               {name}
             </Typography>
           </Grid>
-          <Grid
+          {/* <Grid
             item
             container
             justifyContent="center"
+            alignItems="center"
             component={motion.div}
-            initial={animation.worksWithMobileExample.variants.img.initial}
+            initial={
+              frameVariant === "tablet"
+                ? animation.worksWithMobileExample.variants.imgTablet.initial
+                : animation.worksWithMobileExample.variants.img.initial
+            }
             variants={
-              !isItAdesktopImage
-                ? animation.worksWithMobileExample.variants.img.variants
-                : animation.worksWithMobileExample.variants.imgDesktop.variants
+              frameVariant === "tablet"
+                ? animation.worksWithMobileExample.variants.imgTablet.variants
+                : animation.worksWithMobileExample.variants.img.variants
             }
             sx={{ mt: 2, position: "relative" }}
           >
-            <Image src={img} alt={name} />
-          </Grid>
+            {frameVariant ? (
+              <DeviceFrame variant={frameVariant}>
+                <ScreenPlaceholder />
+              </DeviceFrame>
+            ) : (
+              <ScreenPlaceholder />
+            )}
+          </Grid> */}
         </Grid>
         <Typography
           variant="h5"
@@ -130,7 +144,7 @@ function ProjectCard({
 export default function Works() {
   const { t } = useTranslation();
   const isMobile = useMediaQuery((theme: Theme) =>
-    theme.breakpoints.down("md")
+    theme.breakpoints.down("md"),
   );
 
   const grouped = CATEGORY_ORDER.reduce<Record<ProjectCategory, IProject[]>>(
@@ -138,10 +152,12 @@ export default function Works() {
       acc[cat] = myProjects.filter((p) => p.category === cat);
       return acc;
     },
-    {} as Record<ProjectCategory, IProject[]>
+    {} as Record<ProjectCategory, IProject[]>,
   );
 
-  const activeCategories = CATEGORY_ORDER.filter((cat) => grouped[cat].length > 0);
+  const activeCategories = CATEGORY_ORDER.filter(
+    (cat) => grouped[cat].length > 0,
+  );
 
   return (
     <MainLayout title="Works" bigTitle={t("main_titles.all_personal_works")}>
@@ -151,7 +167,7 @@ export default function Works() {
             {activeCategories.map((cat) => (
               <CategoryChip
                 key={cat}
-                onClick={(e) => {
+                onClick={(e: React.MouseEvent) => {
                   e.preventDefault();
                   scrollToSection(cat);
                 }}
@@ -176,7 +192,11 @@ export default function Works() {
             </Typography>
             <Grid container spacing={2}>
               {grouped[cat].map((project) => (
-                <ProjectCard key={project.name} {...project} isMobile={isMobile} />
+                <ProjectCard
+                  key={project.name}
+                  {...project}
+                  isMobile={isMobile}
+                />
               ))}
             </Grid>
           </Grid>
