@@ -11,13 +11,7 @@ import BugReportIcon from "@mui/icons-material/BugReport";
 import LanIcon from "@mui/icons-material/Lan";
 import { lastProject } from "@/constants/myProjects";
 import useTranslation from "@/hooks/useTranslation";
-
-const ScreenPlaceholder = styled("div")`
-  width: 100%;
-  min-height: 180px;
-  background: linear-gradient(135deg, #1e2124 0%, #2a2d31 100%);
-  border-radius: 4px;
-`;
+import DeviceFrame, { DeviceFrameVariant } from "@/components/DeviceFrame";
 
 const LastBox = styled(BoxMain)(
   ({ theme }) => `
@@ -114,7 +108,17 @@ export default function Home() {
                 }
                 sx={{ mt: 2, position: "relative" }}
               >
-                <ScreenPlaceholder />
+                {(() => {
+                  const variant = (["mobile", "tablet"] as DeviceFrameVariant[]).find(
+                    (v) => lastProject.previews?.[v],
+                  );
+                  const img = variant ? lastProject.previews?.[variant] : undefined;
+                  return variant && img ? (
+                    <DeviceFrame variant={variant}>
+                      <img src={img} alt={lastProject.name} />
+                    </DeviceFrame>
+                  ) : null;
+                })()}
               </Grid>
             </Grid>
             <Typography
