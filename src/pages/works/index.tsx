@@ -1,6 +1,6 @@
 import MainLayout from "@/layout/MainLayout";
 import BoxMain from "@/components/BoxMain";
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { Grid, Theme, Typography, useMediaQuery, styled } from "@mui/material";
 import { motion } from "framer-motion";
 import animation from "@/constants/animation";
@@ -8,6 +8,7 @@ import Arrow from "@/assets/icons/Arrow";
 import myProjects, { IProject, ProjectCategory } from "@/constants/myProjects";
 import useTranslation from "@/hooks/useTranslation";
 import ScrollToTop from "@/components/ScrollToTop";
+import DeviceFrame, { DeviceFrameVariant } from "@/components/DeviceFrame";
 
 const CATEGORY_ORDER: ProjectCategory[] = [
   ProjectCategory.production,
@@ -31,6 +32,14 @@ const CategoryNav = styled("nav")(
   }
 `,
 );
+
+const ScreenPlaceholder = styled("div")`
+  width: 100%;
+  height: 100%;
+  min-height: 120px;
+  background: linear-gradient(135deg, #1e2124 0%, #2a2d31 100%);
+  border-radius: 4px;
+`;
 
 const CategoryChip = styled("a")(
   ({ theme }) => `
@@ -61,8 +70,32 @@ function ProjectCard({
   name,
   environment,
   link,
+  previews,
   isMobile,
 }: IProject & { isMobile: boolean }) {
+  const frameVariants = (
+    Object.keys(previews ?? {}) as DeviceFrameVariant[]
+  ).filter((v) => previews?.[v]);
+
+  const [activeVariant, setActiveVariant] = useState<
+    DeviceFrameVariant | undefined
+  >(frameVariants[0]);
+
+  useEffect(() => {
+    if (frameVariants.length > 1) {
+      setActiveVariant(
+        frameVariants[Math.floor(Math.random() * frameVariants.length)],
+      );
+    }
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
+
+  const activeImg = activeVariant ? previews?.[activeVariant] : undefined;
+  const imgAnim =
+    activeVariant === "tablet"
+      ? animation.worksWithMobileExample.variants.imgTablet
+      : animation.worksWithMobileExample.variants.img;
+
   return (
     <Grid
       item
@@ -92,32 +125,26 @@ function ProjectCard({
               {name}
             </Typography>
           </Grid>
-          {/* <Grid
-            item
-            container
-            justifyContent="center"
-            alignItems="center"
-            component={motion.div}
-            initial={
-              frameVariant === "tablet"
-                ? animation.worksWithMobileExample.variants.imgTablet.initial
-                : animation.worksWithMobileExample.variants.img.initial
-            }
-            variants={
-              frameVariant === "tablet"
-                ? animation.worksWithMobileExample.variants.imgTablet.variants
-                : animation.worksWithMobileExample.variants.img.variants
-            }
-            sx={{ mt: 2, position: "relative" }}
-          >
-            {frameVariant ? (
-              <DeviceFrame variant={frameVariant}>
-                <ScreenPlaceholder />
+          {activeVariant && (
+            <Grid
+              item
+              container
+              justifyContent="center"
+              alignItems="center"
+              component={motion.div}
+              initial={imgAnim.initial}
+              variants={imgAnim.variants}
+              sx={{ mt: 2, position: "relative" }}
+            >
+              <DeviceFrame variant={activeVariant}>
+                {activeImg ? (
+                  <img src={activeImg} alt={name} />
+                ) : (
+                  <ScreenPlaceholder />
+                )}
               </DeviceFrame>
-            ) : (
-              <ScreenPlaceholder />
-            )}
-          </Grid> */}
+            </Grid>
+          )}
         </Grid>
         <Typography
           variant="h5"
