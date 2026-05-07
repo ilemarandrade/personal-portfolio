@@ -51,10 +51,9 @@ const en = {
         'This project is part of the projects to obtain my certificate in "Front End Development Libraries".',
     },
     eventezer_services: {
-      first_paragraph: `**Co-created by Ilemar Andrade & Chellys Castillo**
+      first_paragraph: `Eventezer is a multi-tenant SaaS platform for event management, serving both individuals (weddings, concerts, workshops) and organizations (companies, agencies, associations) on a subscription + commission model — Eventezer only charges a commission on approved orders.
 
-Eventezer is a multi-tenant SaaS platform for event management, serving both individuals (weddings, concerts, workshops) and organizations (companies, agencies, associations) on a subscription + commission model — Eventezer only charges a commission on approved orders.
-We designed and built the REST API from the ground up as a modular NestJS monolith, following a strict layered architecture (Controller → Service → Prisma) with full multi-tenant isolation. All responses are automatically wrapped in a consistent \`{ statusCode, message, data }\` envelope via a global interceptor, and all input is validated by a global ValidationPipe using class-validator.
+I designed and built the REST API from the ground up as a modular NestJS monolith, following a strict layered architecture (Controller → Service → Prisma) with full multi-tenant isolation. All responses are automatically wrapped in a consistent \`{ statusCode, message, data }\` envelope via a global interceptor, and all input is validated by a global ValidationPipe using class-validator.
 
 **What I built:**
 - **Auth & authorization** — JWT with access/refresh token rotation, bcrypt password hashing, OTP staff login flow, role-based guards (OWNER, ADMIN, custom permissions), and a PermissionsGuard that checks per-staff permission rows in the database

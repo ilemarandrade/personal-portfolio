@@ -51,13 +51,11 @@ const es = {
         'Este proyecto es parte de los proyectos para obtener mi certificado en "Front End Development Libraries".',
     },
     eventezer_services: {
-      first_paragraph: `**Co-creada por Ilemar Andrade & Chellys Castillo**
+      first_paragraph: `Eventezer es una plataforma SaaS multi-tenant para la gestión de eventos, orientada tanto a personas naturales (bodas, conciertos, talleres) como a organizaciones (empresas, agencias, asociaciones), con un modelo de suscripción mensual + comisión únicamente sobre órdenes aprobadas.
 
-Eventezer es una plataforma SaaS multi-tenant para la gestión de eventos, orientada tanto a personas naturales (bodas, conciertos, talleres) como a organizaciones (empresas, agencias, asociaciones), con un modelo de suscripción mensual + comisión únicamente sobre órdenes aprobadas.
+Diseñé y construí la API REST desde cero como un monolito NestJS modular, con arquitectura en capas estricta (Controller → Service → Prisma) y aislamiento multi-tenant completo. Todas las respuestas se envuelven automáticamente en un envelope \`{ statusCode, message, data }\` mediante un interceptor global, y toda entrada es validada por un ValidationPipe global con class-validator.
 
-Diseñamos y construimos la API REST desde cero como un monolito NestJS modular, con arquitectura en capas estricta (Controller → Service → Prisma) y aislamiento multi-tenant completo. Todas las respuestas se envuelven automáticamente en un envelope \`{ statusCode, message, data }\` mediante un interceptor global, y toda entrada es validada por un ValidationPipe global con class-validator.
-
-**Qué desarrolle:**
+**Qué desarrollé:**
 - **Autenticación y autorización** — JWT con rotación de access/refresh token, bcrypt, flujo de login OTP para staff, guards por roles (OWNER, ADMIN, permisos personalizados) y un PermissionsGuard que verifica filas de permisos por staff en la base de datos
 - **Gestión de eventos multi-tenant** — CRUD completo de eventos, tipos de entrada (incluyendo admisión por donación), precios, capacidad y visibilidad; jobs programados para el ciclo de vida de los eventos
 - **Flujo de órdenes y pagos** — reservas temporales con expiración via BullMQ, cálculo de comisiones por orden aprobada, configuración de métodos de pago por tenant
