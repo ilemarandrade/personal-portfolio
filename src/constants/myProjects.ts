@@ -31,6 +31,48 @@ export interface IProject {
 }
 const myProjects: IProject[] = [
   {
+    name: "Eventezer Landing Page",
+    slug: "eventezer-landing",
+    link: "/works/eventezer-landing",
+    environment: "NEXT JS WEB",
+    category: ProjectCategory.production,
+    description: ["projects.eventezer.first_paragraph"],
+    previews: {
+      mobile: "/images/projects/eventezer-landing-page/mobile.png",
+      tablet: "/images/projects/eventezer-landing-page/desktop.png",
+    },
+    link_external: "https://eventezer.com",
+    isMarkdown: true,
+    dependencies: [
+      {
+        environment: "Frontend",
+        tools: [
+          "next",
+          "react",
+          "react-dom",
+          "framer-motion",
+          "react-hook-form",
+          "@hookform/resolvers",
+          "zod",
+          "@radix-ui/react-accordion",
+          "@radix-ui/react-label",
+          "@radix-ui/react-slot",
+          "class-variance-authority",
+          "clsx",
+          "gray-matter",
+          "lucide-react",
+          "next-themes",
+          "react-markdown",
+          "remark-gfm",
+          "sonner",
+          "tailwind-merge",
+          "tailwindcss",
+          "typescript",
+        ],
+      },
+    ],
+  },
+  {
     name: "Swordvoice Academy",
     slug: "swordvoice-academy",
     link: "/works/swordvoice-academy",

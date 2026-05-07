@@ -50,9 +50,24 @@ const en = {
       first_paragraph:
         'This project is part of the projects to obtain my certificate in "Front End Development Libraries".',
     },
+    eventezer: {
+      first_paragraph: `**Co-creators: Ilemar Andrade & Chellys Castillo**
+
+Together with my colleague Chellys Castillo, we designed and built the product's landing page from scratch — a modern web experience focused on converting visitors into registered organizers, covering use cases from individuals (weddings, concerts, workshops) to companies and event agencies.
+
+Eventezer is a SaaS platform for event management that unifies publishing, ticketing, payments, check-ins, and analytics in one place. Its business model charges a monthly subscription plus a commission that applies only when an order is approved, removing financial risk for the organizer.
+
+
+**What we built:**
+- Full landing page with hero, value proposition, use cases, pricing, ROI calculator, FAQ, and contact sections
+- Blog with educational content rendered from Markdown
+- Light/dark theme support and scroll-driven animations using Framer Motion
+- Contact form with validation via React Hook Form + Zod
+- Technical SEO: dynamic sitemap, robots.txt, and optimized metadata`,
+    },
     swordvoice: {
       first_paragraph:
-        "Landing page built alongside my colleague Chellys Castillo for the online academy Swordvoice. Developed with Next.js 14, Tailwind CSS, Framer Motion and React Hook Form, including a contact form powered by Nodemailer and a carousel built with React Slick.",
+        "Landing page built alongside my colleague Chellys Castillo for the online academy Swordvoice.",
     },
     puntospoint: {
       first_paragraph:
