@@ -50,6 +50,10 @@ const es = {
       first_paragraph:
         'Este proyecto es parte de los proyectos para obtener mi certificado en "Front End Development Libraries".',
     },
+    swordvoice: {
+      first_paragraph:
+        "Landing page que construí junto a mi colega Chellys Castillo para la academia en línea Swordvoice. Desarrollada con Next.js 14, Tailwind CSS, Framer Motion y React Hook Form, incluyendo un formulario de contacto con Nodemailer y un carrusel con React Slick.",
+    },
     puntospoint: {
       first_paragraph:
         "Prueba técnica frontend para PuntosPoint desarrollada con Next.js 13 (App Router), MUI, Tailwind CSS y React Query. Incluye un dashboard con filtros rastreados mediante eventos de Google Analytics y un catálogo de componentes publicado con Storybook.",

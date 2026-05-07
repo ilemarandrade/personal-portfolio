@@ -31,6 +31,43 @@ export interface IProject {
 }
 const myProjects: IProject[] = [
   {
+    name: "Swordvoice Academy",
+    slug: "swordvoice-academy",
+    link: "/works/swordvoice-academy",
+    environment: "NEXT JS WEB",
+    category: ProjectCategory.production,
+    previews: {
+      tablet: "/images/projects/swordvoice/desktop.png",
+      mobile: "/images/projects/swordvoice/mobile.png",
+    },
+    fullPage: {
+      mobile: "/images/projects/swordvoice/full-page-mobile.png",
+      desktop: "/images/projects/swordvoice/full-page-desktop.png",
+    },
+    link_external: "https://swordvoice-academy.vercel.app/",
+    description: ["projects.swordvoice.first_paragraph"],
+    dependencies: [
+      {
+        environment: "Frontend",
+        tools: [
+          "next",
+          "react",
+          "react-dom",
+          "framer-motion",
+          "react-hook-form",
+          "@hookform/resolvers",
+          "react-hot-toast",
+          "react-slick",
+          "slick-carousel",
+          "yup",
+          "nodemailer",
+          "tailwindcss",
+          "typescript",
+        ],
+      },
+    ],
+  },
+  {
     name: "Wallet",
     slug: "wallet",
     link: "/works/wallet",
