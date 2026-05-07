@@ -50,6 +50,44 @@ const es = {
       first_paragraph:
         'Este proyecto es parte de los proyectos para obtener mi certificado en "Front End Development Libraries".',
     },
+    eventezer_services: {
+      first_paragraph: `**Co-creada por Ilemar Andrade & Chellys Castillo**
+
+Eventezer es una plataforma SaaS multi-tenant para la gestión de eventos, orientada tanto a personas naturales (bodas, conciertos, talleres) como a organizaciones (empresas, agencias, asociaciones), con un modelo de suscripción mensual + comisión únicamente sobre órdenes aprobadas.
+
+Diseñamos y construimos la API REST desde cero como un monolito NestJS modular, con arquitectura en capas estricta (Controller → Service → Prisma) y aislamiento multi-tenant completo. Todas las respuestas se envuelven automáticamente en un envelope \`{ statusCode, message, data }\` mediante un interceptor global, y toda entrada es validada por un ValidationPipe global con class-validator.
+
+**Qué construimos:**
+- **Autenticación y autorización** — JWT con rotación de access/refresh token, bcrypt, flujo de login OTP para staff, guards por roles (OWNER, ADMIN, permisos personalizados) y un PermissionsGuard que verifica filas de permisos por staff en la base de datos
+- **Gestión de eventos multi-tenant** — CRUD completo de eventos, tipos de entrada (incluyendo admisión por donación), precios, capacidad y visibilidad; jobs programados para el ciclo de vida de los eventos
+- **Flujo de órdenes y pagos** — reservas temporales con expiración via BullMQ, cálculo de comisiones por orden aprobada, configuración de métodos de pago por tenant
+- **Check-in digital** — QR firmados por entrada, período de gracia configurable, estado en tiempo real via Socket.io WebSockets
+- **Analíticas y facturación** — reportes por tenant sobre ventas, ingresos y asistencia; gestión de planes de facturación y facturas
+- **Email transaccional** — flujos de invitación, confirmaciones de órdenes y envío de entradas via Resend
+- **Transmisión en vivo** — integración con Cloudflare Stream con ciclo de vida automatizado del live input, impulsado por jobs programados y event emitters
+- **Tipo de cambio** — scraper del BCV con caché en Redis para soporte multi-divisa
+- **Almacenamiento de archivos** — almacenamiento S3-compatible con procesamiento via Sharp
+- **Lista de espera** — captura de interés preventa y gestión de lista de espera por evento
+
+**Stack:** NestJS v11 · TypeScript · PostgreSQL · Prisma v7 · BullMQ + Redis · Socket.io · Resend · AWS S3 + Sharp · Cloudflare Stream · passport-jwt · class-validator · Swagger`,
+    },
+    eventezer_admin: {
+      first_paragraph: `**Co-creada por Ilemar Andrade & Chellys Castillo**
+
+Construimos el Panel de Administración de Eventezer como el centro de operaciones interno para los organizadores de eventos. Ya sea una boda, una conferencia corporativa o un ciclo de conciertos, los organizadores gestionan desde este dashboard cada aspecto operativo de sus eventos en una sola interfaz.
+
+**Qué construimos:**
+- **Gestión de eventos** — crear, publicar y configurar eventos con control total sobre tipos de entradas, precios, capacidad y visibilidad
+- **Gestión de asistentes y entradas** — consultar asistentes registrados, filtrar por tipo de entrada o estado, gestionar detalles a nivel de orden
+- **Check-in digital** — seguimiento en tiempo real para que el staff valide asistentes el día del evento
+- **Órdenes y pagos** — revisar órdenes entrantes, hacer seguimiento del estado de pago y gestionar ingresos por comisión
+- **Dashboard de analíticas** — reportes visuales sobre ventas, tendencias de ingresos y asistencia con gráficas interactivas
+- **Autenticación** — gestión de sesiones JWT con flujo de access token y refresh token
+
+**Stack:** Next.js 16 (App Router + RSC) · React 19 · TypeScript · Tailwind CSS v4 · TanStack Query v5 · Axios · react-hook-form + Zod · ApexCharts · Zustand
+
+Estructuramos el código con arquitectura de carpetas por feature (Scream Architecture) y principios de Atomic Design, hooks de API co-localizados y cobertura total de TypeScript.`,
+    },
     eventezer: {
       first_paragraph: `**Co-creadores: Ilemar Andrade & Chellys Castillo**
 
