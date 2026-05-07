@@ -1,15 +1,12 @@
 import { Button, Grid, GridProps, styled, Theme } from "@mui/material";
-import {
-  AnimationProps,
-  ForwardRefComponent,
-  HTMLMotionProps,
-} from "framer-motion";
 import Image from "next/image";
 import NavLink from "../NavLink";
 
-interface NavStylesProps extends GridProps, AnimationProps {
-  component: ForwardRefComponent<HTMLDivElement, HTMLMotionProps<"div">>;
-}
+type NavStylesProps = GridProps & {
+  component?: any;
+  initial?: any;
+  animate?: any;
+};
 export const NavStyles = styled(Grid)<NavStylesProps>(
   ({ theme }) => `
     height: 109px;

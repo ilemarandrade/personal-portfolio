@@ -1,5 +1,5 @@
 import React from "react";
-import { motion, Transition, SVGMotionProps } from "framer-motion";
+import { motion, Easing, SVGMotionProps } from "framer-motion";
 import { useTheme } from "@mui/material";
 
 interface Props {
@@ -39,13 +39,13 @@ const MenuButton = ({ isOpen = false, onClick = () => {} }: Props) => {
       translateY: -1.4,
     },
   };
-  const lineProps = {
+  const lineProps: SVGMotionProps<SVGLineElement> = {
     stroke: "white",
     strokeWidth: 6,
     vectorEffect: "non-scaling-stroke",
     initial: "closed",
     animate: variant,
-    transition: { ease: "easeOut", duration: 0.2 },
+    transition: { ease: "easeOut" as Easing, duration: 0.2 },
   };
   const unitHeight = 4;
   const unitWidth = (unitHeight * (width as number)) / (height as number);
