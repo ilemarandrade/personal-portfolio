@@ -8,7 +8,9 @@ interface Props {
   children: ReactNode;
   className?: string;
 }
-const NavLinkStyles = styled(Link)(
+const NavLinkStyles = styled(Link, {
+  shouldForwardProp: (prop) => prop !== "isActive",
+})(
   ({ theme, isActive }: { isActive: boolean; theme?: Theme }) => `
 
   color: ${isActive ? `${theme?.palette.text.tertiary} !important` : ""};

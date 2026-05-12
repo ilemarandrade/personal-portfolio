@@ -80,7 +80,9 @@ interface MenuProps extends GridProps {
   isOpen: boolean;
   theme?: Theme;
 }
-export const Menu = styled(Grid)(
+export const Menu = styled(Grid, {
+  shouldForwardProp: (prop) => prop !== "isOpen",
+})(
   ({ isOpen, theme }: MenuProps) => `
     background: #111111;
     width: 100vw;
@@ -90,7 +92,7 @@ export const Menu = styled(Grid)(
     padding: 8px 25px;
     top: ${isOpen ? "80px" : "-100vh"};
     transition: top 0.3s cubic-bezier(0.68, -0.55, 0.27, 1.55);
-    z-index: 2;
+    z-index: 200;
     ${[theme?.breakpoints.up("md")]}{
       display: none;
     }
