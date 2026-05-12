@@ -70,12 +70,12 @@ export default function Contact() {
               </a>
             </Typography>
           </Grid>
-          <Grid xs={12} md={7} item>
+          {/* <Grid xs={12} md={7} item>
             <ContainerForm container direction="column">
               <Typography variant="h3">In development</Typography>
               <FormContact />
             </ContainerForm>
-          </Grid>
+          </Grid> */}
         </Grid>
       </Grid>
     </MainLayout>

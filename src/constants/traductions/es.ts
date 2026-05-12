@@ -235,7 +235,7 @@ Utilice vercel para el deploy.
   web_development: "Desarrollo <br /> Web",
   test_code: "Test a código",
   ci_cd: "CI/CD",
-  the_last_personal_project: "Ultimo proyecto personal",
+  the_last_personal_project: "Ultimo proyecto",
   dependencies: "Dependencias",
 };
 
