@@ -57,7 +57,7 @@ export default function Contact() {
               {t("contact.want_to_call_me")}
             </Typography>
             <Typography variant="body1" sx={{ mb: 2 }}>
-              <a href="https://wa.me/584144505536">
+              <a href="https://wa.me/573229052681">
                 {t("contact.can_do_it_by_ws")}
               </a>
             </Typography>
